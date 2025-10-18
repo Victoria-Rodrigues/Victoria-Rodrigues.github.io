@@ -1,0 +1,26 @@
+{
+  "workshoptitle": "Explore PDFs de Forma Simples com a Técnica de Busca Semântica",
+  "help": " ",
+	"tutorials": [
+    {
+      "title": "Configuração do Ambiente de Laboratório",
+      "filename": "0-pt-config-lab/0-pt-config-lab.md"
+    },
+    {
+      "title": "Oracle 23ai Vector Search: Configure seu Banco Vetorial para Análises Avançadas",
+      "filename": "2-23ai-database/2-23ai-database.md"
+    },
+    {
+      "title": "Oracle APEX: Crie Interfaces Dinâmicas para Explorar seus Dados",
+      "filename": "3-apex/3-apex.md"
+    },
+    {
+      "title": "Oracle AI Agents + OCI Generative AI: Transforme sua Base de Dados em um Sistema de Respostas Inteligentes",
+      "filename": "4-agents-generative-ai/4-agents-generative-ai.md"
+    },
+    {
+      "title": "Oracle Analytics Cloud: Insights Avançados para Decisões Estratégicas",
+      "filename": "5-analytics-cloud/5-analytics-cloud.md"
+    }
+  ]
+}
