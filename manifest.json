@@ -4,7 +4,7 @@
 	"tutorials": [
     {
       "title": "Introdução",
-      "filename": "0-introducao/0-intro.md"
+      "filename": "0-Introducao/0-intro.md"
     },
     {
       "title": "Configuração do Ambiente de Laboratório",
