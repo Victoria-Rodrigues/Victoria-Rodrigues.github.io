@@ -29,21 +29,14 @@ Este laboratório pressupõe que você tenha:
 
 - Uma conta Oracle Cloud
 - Acesso a uma região onde o serviço de agente está disponível: Ashburn, Sao Paulo, Frankfurt, Osaka, London, Chicago e Phoenix. [Consulte](https://docs.oracle.com/en-us/iaas/Content/generative-ai-agents/overview.htm#regions) 
-- 
+- Deve ter uma conta de administrador ou permissões para gerenciar vários serviços OCI:
+    - Policies
+    - Generative AI Agents
+    - Object Storage
+    - Oracle Autonomous Database 26ai
+    
 
 <br>
-
-### **Recursos e Suporte**:
-
-- **Download dos PDFs**: Neste laboratório utilizaremos dois documentos:
-     - [Normas Internas Dataprev](https://www.dataprev.gov.br/governanca/normativos/normasinternas): Para o nosso exemplo, utilizaremos o arquivo **Viagem a Serviço Nacional**.
-     - [Revista Dataprev Resultados nº 16](https://www.dataprev.gov.br/acompanhe-dataprev-publicacoes/revista-dataprev-resultados): Para o nosso exemplo, utilizaremos o arquivo **Revista Dataprev Resultados nº 16**.
-
-- **Documentação da Oracle Cloud**: [Generative AI Agents](https://docs.oracle.com/pt-br/iaas/Content/generative-ai-agents/home.htm)
-- **Tutoriais**: [Deploy an ODA Chatbot powered by Generative AI Agents](https://apexapps.oracle.com/pls/apex/f?p=133:180:2908048658105::::wid:4022)
-
-
-### _**Aproveite sua experiência na Oracle Cloud!**_
 
 
 ## 1️⃣ Criação de Bucket no Object Storage e Upload de PDF
