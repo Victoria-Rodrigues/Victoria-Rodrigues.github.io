@@ -103,9 +103,13 @@ Nesta tela, siga os seguintes passos:
 
 1. Insira o nome do agente. Recomendamos o nome **agent-ai-demo**.
 2. No campo **Description** adicione uma descrição sobre o agente:
+
 > **Você responde dúvidas sobre direitos dos consumidores com base no Código de Defesa do Consumidor do Brasil, fornecendo respostas claras e fundamentadas na legislação. Sempre que possível, cite os artigos relevantes do CDC.**
+
 3. No campo **Welcome Message**, insira a mensagem de boas-vindas que será exibida para o usuário ao iniciar a interação com o agente. Exemplo: 
+
 > **Bem-vindo! Estou aqui para esclarecer suas dúvidas sobre o Código de Defesa do Consumidor. Como posso ajudar?**
+
 4. Clique em **Next**
 
 ![Configuration Agents](images/configuration-agents.png)
@@ -117,9 +121,13 @@ Na proxima tela, iremos configurar a o RAG Tool, clique em **Add Tool** e siga o
 1. Selecione a opção **RAG**.
 2. Insira o nome do RAG. Recomendamos o nome **rag-agent**.
 3. No campo **Description** insira uma descrição explicando de forma clara o que o RAG Tool pode recuperar permitindo que o agente de IA faça escolhas mais inteligentes sobre quando usá-la, garantindo respostas mais relevantes e precisas para o usuário.
+
 >**Esta ferramenta pode recuperar informações detalhadas sobre os direitos e deveres dos consumidores conforme o Código de Defesa do Consumidor do Brasil, incluindo explicações sobre processos de reclamação, garantias, práticas comerciais, contratos, troca de produtos, reembolsos e orientações sobre como proceder em casos de descumprimento da legislação de defesa do consumidor. Ela oferece acesso a artigos específicos do CDC e interpretações confiáveis para apoiar o usuário em suas dúvidas referentes a relações de consumo no Brasil.**
+
 4. No campo **Custom instructions** adicione instruções específicas para o agente. No exemplo, foi utilizado:
+
 >**Você responde dúvidas sobre direitos dos consumidores com base no Código de Defesa do Consumidor do Brasil, fornecendo respostas claras e fundamentadas na legislação. Sempre que possível, cite os artigos relevantes do CDC. Responda sempre de forma clara e exclusivamente em português brasileiro.**
+
 5. Na seção **Add Knowledge Bases**, selecione a base de conhecimento que será vinculada ao agente. Certifique-se de que a base de conhecimento está ativa. **O Lifecycle State deve aparecer como Active.**
 6. Clique no botão **Add tool** para adicionar tool.
 
@@ -145,10 +153,10 @@ O campo **Lifecycle State** exibirá o status como **Creating**, com média de t
 ![Sucess Messages Agent](images/sucess-messages-agent.png)
 
 Clique no nome do agente e, em seguida, selecione a opção **Launch Chat** para iniciar a interação com o agente.
-> **ATENÇÃO: Caso o agente esteja ativo e o botão não esteja disponível, acesse o menu à esquerda inferior e selecione Endpoints. Verifique se o Lifecycle State do endpoint está como Active. Se o status estiver como Creating, aguarde a finalização e atualize a página.**
 
 ![Launch Chat](images/launch-chat.png)
 
+> **ATENÇÃO: Caso o agente esteja ativo e o botão não esteja disponível, acesse o menu à esquerda inferior e selecione Endpoints. Verifique se o Lifecycle State do endpoint está como Active. Se o status estiver como Creating, aguarde a finalização e atualize a página.**
 
 ## 4️⃣ Interface de Interação com o Assistente Virtual
 
