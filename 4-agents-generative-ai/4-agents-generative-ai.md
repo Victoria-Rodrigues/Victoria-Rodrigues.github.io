@@ -74,11 +74,11 @@ Nesta tela, siga os passos abaixo:
 
 ![Informations Knowledge](images/informations-knowledge.png)
 
-Na tela seguinte, siga os passos abaixo:
-1.  Insira o nome da sua fonte de dados. Recomendamos utilizar **pdfs-dataprev**
+Na tela seguinte, vamos definir o **Data Source**. Siga os passos abaixo:
+1.  Insira o nome da sua fonte de dados. Recomendamos utilizar **kb-agent-ai**
 2.  Marque a opção **Enable Multi-Modal Parsing** para permitir a interpretação de gráficos, tabelas e outros elementos visuais dos documentos.
-3.  Em Select bucket, escolha o bucket previamente criado (neste exemplo, bucket-ai-agent).
-4.  Marque a caixa ao lado de **Object prefixes** para selecionar os arquivos que serão utilizados. Você poderá escolher entre 1 ou mais arquivos.
+3.  Em Select bucket, escolha o bucket previamente criado (neste exemplo, bucket-demo-ai-agent).
+4.  Marque a caixa **Select all in bucket**. 
 5.  Clique em **Create** para finalizar a criação da fonte de dados.
 
 ![Data Source](images/data-source.png)
