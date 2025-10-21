@@ -42,12 +42,11 @@ Neste laboratório vamos utilizar os documentos público sobre o Código de Prot
 
 Em seguida, acesse o bucket criado anteriormente e clique em **Objects** e **Upload objects**. Selecione os arquivos PDFs baixaos no seu computador, **clique e arraste para a região delimitada** e finalize clicando em **Upload** na parte inferior da tela.
 
+![Clique Objects](images/bucket-clique-objects.png)
+![Upload File](images/upload-file.png)
 
-![Upload PDF](images/upload-pdf.png)
+Em seguida, clique em **Next** e **Upload Objects**. O arquivo deve aparecer em seu bucket como na imagem identificada abaixo.
 
-Aguarde a conclusão do processo. Em seguida, clique em **Close**. O arquivo deve aparecer em seu bucket como na imagem identificada abaixo.
-
-![Close](images/close.png)
 ![Bucket PDF](images/bucket-pdf.png)
 
 ## 2️⃣ Criação da Base de Conhecimento (Knowledge Base)
