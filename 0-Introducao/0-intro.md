@@ -6,6 +6,8 @@ O **OCI Generative AI Agents** é um serviço totalmente gerenciado que integra 
 
 A utilização da abordagem **RAG (Retrieval-Augmented Generation)** permite que os agentes combinem geração de linguagem natural com recuperação de informações em bases de dados corporativos. Essa integração aprimora significativamente os **chatbots**, tornando-os capazes de oferecer respostas precisas, baseadas em contexto e alinhadas aos dados reais da organização.
 
+![Buckets](images/fluxo-ai-agent.png)
+
 
 ### **Recursos principais**
 Com funcionalidades avançadas, o OCI Generative AI Agents oferece uma experiência poderosa e eficiente.
