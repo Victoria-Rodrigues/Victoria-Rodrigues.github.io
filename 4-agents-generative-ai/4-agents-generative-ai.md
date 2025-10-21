@@ -37,7 +37,7 @@ Clique em **Create Buckets**. Em seguida, insira um nome para o seu bucket. Reco
 Após a criação do bucket, clique em seu nome para acessá-lo. Em seguida, clique em **Upload**, selecione os arquivos PDFs desejados do seu computador, **clique e arraste para a região delimitada** e finalize clicando em **Upload** na parte inferior da tela.
 
 Neste laboratório utilizaremos documentos público sobre o Código de Proteção e Defesa do Consumidor:
-- [Documento 1: Perguntas frequentes sobre Código de Proteção e Defesa do Consumidor](documentos/perguntas%20frequentes%20codigo%20defesa%20do%20consumidor.pdf)
+- [Documento 1: Peerguntas frequentes sobre Código de Proteção e Defesa do Consumidor](documentos/perguntas%20frequentes%20codigo%20defesa%20do%20consumidor.pdf)
 - [Documento 2: Código de Proteção e Defesa do Consumidor 2025](documentos/Codigo%20de%20defesa%20do%20consumidor%202025.pdf)
 
 
@@ -50,7 +50,7 @@ Aguarde a conclusão do processo. Em seguida, clique em **Close**. O arquivo dev
 
 ## 2️⃣ Criação da Base de Conhecimento (Knowledge Base)
 
-Clique no menu de hambúrguer localizado no canto superior esquerdo da tela. Em seguida, selecione **Analytics & AI** e depois **Generative AI Agents**.
+Clique no menu de hambúrguer localizado no canto superior esquerdo da tela. Em seguida, selecione Analytics & AI e depois Generative AI Agents.
 
 ![Menu Agents](images/menu-agents.png)
 
@@ -71,7 +71,7 @@ Nesta tela, siga os passos abaixo:
 ![Informations Knowledge](images/informations-knowledge.png)
 
 Na tela seguinte, siga os passos abaixo:
-1.  Insira o nome da sua fonte de dados. Recomendamos utilizar **kb-documentos**
+1.  Insira o nome da sua fonte de dados. Recomendamos utilizar **pdfs-dataprev**
 2.  Marque a opção **Enable Multi-Modal Parsing** para permitir a interpretação de gráficos, tabelas e outros elementos visuais dos documentos.
 3.  Em Select bucket, escolha o bucket previamente criado (neste exemplo, bucket-ai-agent).
 4.  Marque a caixa ao lado de **Object prefixes** para selecionar os arquivos que serão utilizados. Você poderá escolher entre 1 ou mais arquivos.
