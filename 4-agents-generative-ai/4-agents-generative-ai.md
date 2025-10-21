@@ -89,9 +89,9 @@ Na tela de criação da base de conhecimento, marque a opção **Automatically s
 
 Verifique as mensagens no canto superior direito, indicando o sucesso na criação da base de conhecimento, da fonte de dados e do job de ingestão.
 
-O status da base de conhecimento aparecerá como **Creating** até que o processo seja concluído, cuja média de tempo é de **3-5 minutos**. Aguarde a finalização antes de prosseguir.
-
 ![Sucess Messages](images/sucess-messages.png)
+
+O status da base de conhecimento aparecerá como **Creating** até que o processo seja concluído, cuja média de tempo é de **3-5 minutos**. Aguarde a finalização antes de prosseguir.
 
 ## 3️⃣ Criação do Agente de IA
 
