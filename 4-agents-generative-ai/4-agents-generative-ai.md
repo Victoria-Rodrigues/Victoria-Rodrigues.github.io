@@ -67,7 +67,7 @@ Selecione **Create Knowledge Base**, conforme indicado abaixo.
 ![Create Knowledge](images/create-knowledge.png)
 
 Nesta tela, siga os passos abaixo:  
-1. Insira o nome da sua base de conhecimento. Recomendamos utilizar **knowledge-base-agent**.  
+1. Insira o nome da sua base de conhecimento. Recomendamos utilizar **kb-ai-agent**.  
 2. No campo **Data Source Type**, selecione a opção **Object Storage**.  
 3. Selecione a opção **Enable Hybrid Search**, que combina pesquisa semântica (busca baseada no significado e contexto) e pesquisa lexical (busca por correspondência exata de termos), garantindo resultados mais precisos e relevantes.
 4. Clique em **Specify Data Source** para configurar os arquivos que serão utilizados pelo Agent.  
