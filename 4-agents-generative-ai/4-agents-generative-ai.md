@@ -28,7 +28,7 @@ Na guia do navegador com o OCI aberto, clique no menu de hambúrguer localizado 
 ![Buckets](images/buckets.png)
 
 
-Clique em **Create Buckets**. Em seguida, insira um nome para o seu bucket. Recomendamos o nome **bucket-demo-ai-agent**. Finalize clicando em **Create**.
+Clique em **Create Bucket**. Em seguida, insira um nome para o seu bucket. Recomendamos o nome **bucket-demo-ai-agent**. Finalize clicando em **Create**.
 
 ![Create Buckets](images/bucket.png)
 ![Create Buckets](images/create-buckets.png)
@@ -40,12 +40,15 @@ Neste laboratório vamos utilizar os documentos público sobre o Código de Prot
 - [Documento 1: Perguntas frequentes sobre Código de Proteção e Defesa do Consumidor](documentos/perguntas%20frequentes%20codigo%20defesa%20do%20consumidor.pdf)
 - [Documento 2: Código de Proteção e Defesa do Consumidor 2025](documentos/Codigo%20de%20defesa%20do%20consumidor%202025.pdf)
 
-Em seguida, acesse o bucket criado anteriormente e clique em **Objects** e **Upload objects**. Selecione os arquivos PDFs baixaos no seu computador, **clique e arraste para a região delimitada** e finalize clicando em **Upload** na parte inferior da tela.
+Em seguida, acesse o bucket criado anteriormente e clique em **Objects** e **Upload objects**. 
 
 ![Clique Objects](images/bucket-clique-objects.png)
+
+Selecione os arquivos PDFs baixados no seu computador, **clique e arraste para a região delimitada**. Em seguida, clique em **Next** e **Upload Objects**.
+
 ![Upload File](images/upload-file.png)
 
-Em seguida, clique em **Next** e **Upload Objects**. O arquivo deve aparecer em seu bucket como na imagem identificada abaixo.
+ O arquivo deve aparecer em seu bucket como na imagem identificada abaixo.
 
 ![Bucket PDF](images/bucket-pdf.png)
 
