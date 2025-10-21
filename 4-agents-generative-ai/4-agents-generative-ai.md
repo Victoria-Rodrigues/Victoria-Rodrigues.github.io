@@ -2,35 +2,13 @@
 
 ## 📌 Introdução
 
->**O OCI Generative AI Agents é um serviço avançado que combina o poder dos grandes modelos de linguagem (LLMs) com técnicas de recuperação inteligente, permitindo que organizações desenvolvam agentes virtuais capazes de fornecer respostas contextuais e precisas ao consultar suas bases de conhecimento.** 
-
-![AI Agents](images/ai-agent.png)
-Referência: [Generative AI Agents](https://www.oracle.com/br/artificial-intelligence/generative-ai/agents/)
-
-### ➡️ **Recursos principais**
-Com funcionalidades avançadas, o OCI Generative AI Agents oferece uma experiência poderosa e eficiente.
-- **Integração de dados e canais de interação:** Suporte a chat e API, facilitando a interação entre usuários e agentes.  
-- **Respostas contextualmente relevantes:** As respostas são geradas com base em consultas inteligentes à base de conhecimento, garantindo precisão e contexto.  
-- **Pesquisa híbrida:** Combina métodos léxicos e semânticos para alcançar maior assertividade nas respostas.  
-- **Moderação de conteúdo:** Garante interações seguras e respeitosas com controles para entrada e saída de dados.  
-- **Conversas multi-turn:** Permite que usuários façam perguntas de acompanhamento, com respostas que levam em conta o histórico da conversa.  
-- **Interpretação de elementos visuais:** Capacidade de interpretar gráficos e tabelas em PDFs sem necessidade de descrições adicionais.  
-- **Hiperlinks automáticos:** Os links presentes nos documentos são automaticamente extraídos e incluídos nas respostas.  
-
-
-### ➡️ **Como o OCI Generative AI Agents revoluciona a interação com bases de conhecimento?**
-
-O serviço transforma a forma como os agentes interagem ao:  
-
-- **Aumentar a transparência e a rastreabilidade:** Cada resposta pode ser vinculada à sua fonte original, garantindo responsabilidade.  
-- **Garantir atualizações contínuas:** Bases de conhecimento podem ser atualizadas sem interromper o funcionamento do agente.  
-- **Oferecer escalabilidade e segurança:** Arquitetura robusta que suporta cargas crescentes sem comprometer a integridade dos dados.
+Este laboratório orienta você nas etapas para configurar um agente de IA generativa OCI, incluindo a ingestão de uma base de conhecimento no OCI Object Storage.
 
 <br>
 
 ### 📌 **Objetivos**
 
-Descubrir como utilizar de forma prática a funcionalidade de busca vetorial do Oracle Generative AI Agents para otimizar consultas em documentos no formato PDF.
+Descubrar como utilizar de forma prática a funcionalidade de busca vetorial do Oracle Generative AI Agents para otimizar consultas em documentos.
 
 O que você aprenderá:
 
@@ -39,17 +17,6 @@ O que você aprenderá:
 - Explorar como implementar a funcionalidade de Retrieval-Augmented Generation (RAG) para consultar documentos personalizados com eficiência e contexto.
 
 <br>
-### **Recursos e Suporte**:
-
-- **Download dos PDFs**: Neste laboratório utilizaremos dois documentos:
-     - [Normas Internas Dataprev](https://www.dataprev.gov.br/governanca/normativos/normasinternas): Para o nosso exemplo, utilizaremos o arquivo **Viagem a Serviço Nacional**.
-     - [Revista Dataprev Resultados nº 16](https://www.dataprev.gov.br/acompanhe-dataprev-publicacoes/revista-dataprev-resultados): Para o nosso exemplo, utilizaremos o arquivo **Revista Dataprev Resultados nº 16**.
-
-- **Documentação da Oracle Cloud**: [Generative AI Agents](https://docs.oracle.com/pt-br/iaas/Content/generative-ai-agents/home.htm)
-- **Tutoriais**: [Deploy an ODA Chatbot powered by Generative AI Agents](https://apexapps.oracle.com/pls/apex/f?p=133:180:2908048658105::::wid:4022)
-
-
-### _**Aproveite sua experiência na Oracle Cloud!**_
 
 
 ## 1️⃣ Criação de Bucket no Object Storage e Upload de PDF
@@ -69,9 +36,10 @@ Clique em **Create Buckets**. Em seguida, insira um nome para o seu bucket. Reco
 
 Após a criação do bucket, clique em seu nome para acessá-lo. Em seguida, clique em **Upload**, selecione os arquivos PDFs desejados do seu computador, **clique e arraste para a região delimitada** e finalize clicando em **Upload** na parte inferior da tela.
 
-Neste laboratório utilizaremos dois documentos:
-- [Normas Internas Dataprev](https://www.dataprev.gov.br/governanca/normativos/normasinternas): Para o nosso exemplo, utilizaremos o arquivo **Viagem a Serviço Nacional**.
-- [Revista Dataprev Resultados nº 16](https://www.dataprev.gov.br/acompanhe-dataprev-publicacoes/revista-dataprev-resultados): Para o nosso exemplo, utilizaremos o arquivo **Revista Dataprev Resultados nº 16**.
+Neste laboratório utilizaremos documentos público sobre o Código de Proteção e Defesa do Consumidor:
+- [Documento 1: Peerguntas frequentes sobre Código de Proteção e Defesa do Consumidor](documentos/perguntas%20frequentes%20codigo%20defesa%20do%20consumidor.pdf)
+- [Documento 2: Código de Proteção e Defesa do Consumidor 2025](documentos/Codigo%20de%20defesa%20do%20consumidor%202025.pdf)
+
 
 ![Upload PDF](images/upload-pdf.png)
 
