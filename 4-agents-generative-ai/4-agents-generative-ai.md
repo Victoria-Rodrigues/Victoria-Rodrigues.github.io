@@ -28,13 +28,12 @@ Na guia do navegador com o OCI aberto, clique no menu de hambúrguer localizado 
 ![Buckets](images/buckets.png)
 
 
-Clique em **Create Buckets**. Em seguida, insira um nome para o seu bucket. Recomendamos o nome **ai-agent-buckets**. Finalize clicando em **Create**.
+Clique em **Create Buckets**. Em seguida, insira um nome para o seu bucket. Recomendamos o nome **bucket-demo-ai-agent**. Finalize clicando em **Create**.
 
 ![Create Buckets](images/create-buckets.png)
 
-![Name bucket](images/name-bucket.png)
 
-Após a criação do bucket, clique em seu nome para acessá-lo. Em seguida, clique em **Upload**, selecione os arquivos PDFs desejados do seu computador, **clique e arraste para a região delimitada** e finalize clicando em **Upload** na parte inferior da tela.
+Após a criação do bucket, clique em seu nome para acessá-lo. Em seguida, clique em **Objects** e **Upload objects**, selecione os arquivos PDFs desejados do seu computador, **clique e arraste para a região delimitada** e finalize clicando em **Upload** na parte inferior da tela.
 
 Neste laboratório utilizaremos documentos público sobre o Código de Proteção e Defesa do Consumidor:
 - [Documento 1: Perguntas frequentes sobre Código de Proteção e Defesa do Consumidor](documentos/perguntas%20frequentes%20codigo%20defesa%20do%20consumidor.pdf)
