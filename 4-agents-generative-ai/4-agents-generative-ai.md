@@ -54,7 +54,7 @@ Selecione os arquivos PDFs baixados no seu computador, **clique e arraste para a
 
 ## 2️⃣ Criação da Base de Conhecimento (Knowledge Base)
 
-Clique no menu de hambúrguer localizado no canto superior esquerdo da tela. Em seguida, selecione Analytics & AI e depois Generative AI Agents.
+Clique no menu de hambúrguer localizado no canto superior esquerdo da tela. Em seguida, selecione **Analytics & AI** e depois **Generative AI Agents**.
 
 ![Menu Agents](images/menu-agents.png)
 
@@ -181,23 +181,29 @@ Esta é a área principal onde você pode interagir com o agente. Aqui, o assist
 
 Na imagem abaixo, você pode observar o funcionamento do assistente virtual ao responder perguntas baseadas em diferentes documentos previamente carregados na base de conhecimento.
 
-1. A pergunta **"O que é o Programa de Qualificação de Dados e Benefícios?"** foi realizada com base em um documento específico presente na base de conhecimento.
-2. Outra pergunta foi realizada: **"Quais situações podem gerar reembolso na viagem a serviço nacional?"**, utilizando informações de um documento diferente da mesma base de conhecimento.
+![Chat Agent](images/chat-agent.png)
 
-Exemplos de perguntas para os documentos utilizados:
+Exemplos de perguntas para fazer os testes:
 
-> ### **Revista Dataprev**
-> 1. Qual é o objetivo principal da Dataprev nos seus 50 anos de atuação?
-> 2. O que é a Infraestrutura Nacional de Dados (IND)?
-> 3. Quais foram os avanços tecnológicos destacados pela Dataprev?
-> 4. Como a Dataprev contribui para a soberania digital do Brasil?
-> ### **Normas internas**
-> 1. Quem está sujeito à aplicação da norma de Viagem a Serviço Nacional?
-> 2. O que é o adicional de deslocamento de embarque e desembarque?
-> 3. Quais tipos de alteração de viagem são previstos?
-> 4. O que é a Proposta de Concessão de Diárias e Passagens (PCDP)?
-> 5. Qual o prazo para prestação de contas após a viagem?
-> 6. Quais são os valores estabelecidos para diárias e deslocamentos?
+    <copy>
+    Não gostei do produto. Posso cancelar a compra?
+    </copy>
+<!-- Separador -->
+
+    <copy>
+    Ao abrir uma conta bancária, fui informado de que era obrigatório contratar um seguro de vida. Gostaria de saber se essa exigência por parte do banco está correta.  
+    </copy>
+<!-- Separador -->
+
+    <copy>
+    O cinema da minha cidade proíbe a entrada de produtos adquiridos no supermercado, obrigando os clientes a comprarem apenas os itens vendidos no local. Essa prática está correta? 
+    </copy>
+<!-- Separador -->
+
+    <copy>
+    A escola da minha filha está solicitando diversos materiais. Gostaria de saber quais itens podem ser incluídos legalmente na lista de material escolar.
+    </copy>
+<!-- Separador -->
 
 
 ![Questions](images/questions-agent.png)
