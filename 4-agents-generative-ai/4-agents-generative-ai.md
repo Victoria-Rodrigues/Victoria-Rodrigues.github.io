@@ -208,18 +208,21 @@ Exemplos de perguntas para fazer os testes:
 
 ![Questions](images/questions-agent.png)
 
-Ao clicar em **View Citations**, você expande as referências utilizadas pelo assistente para gerar a resposta. Os **ícones** à esquerda permitem abrir o documento em outra aba do navegador ou fazer o download do arquivo, respectivamente 
+Ao clicar em **View Citations**, você expande as referências utilizadas pelo assistente para gerar a resposta. 
+
+![View Citations](images/view-citations.png)
 
 Cada citação apresenta as seguintes informações:
 
-> - **Title:** O nome do arquivo PDF de onde a informação foi extraída (neste exemplo, revistadataprevresultados16_web_2_2.pdf).
+> - **Title:** O nome do arquivo PDF de onde a informação foi extraída.
 > - **Object storage path:** O caminho do arquivo no armazenamento do OCI.
 > - **Document ID:** Um identificador único do documento.
 > - **Page numbers:** Indica o número da página no documento de onde a informação foi retirada.
 > - **Source text:** Exibe o trecho exato do documento utilizado para compor a resposta do assistente.
 
-![Citations](images/citations.png)
+Traces
 
+![alt text](image.png)
 
 Laboratório finalizado! Parabéns por concluir todas as etapas. Fique à vontade para criar novas perguntas, explorar a sua aplicação e descobrir ainda mais possibilidades com o seu assistente virtual.
 
