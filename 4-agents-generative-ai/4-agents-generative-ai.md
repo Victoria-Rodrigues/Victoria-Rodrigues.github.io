@@ -12,14 +12,14 @@ Descubrar como utilizar de forma prática a funcionalidade de busca vetorial do 
 
 O que você aprenderá:
 
-- Criar buckets no Object Storage e realizar o upload de documentos PDF.
+- Criar buckets no Object Storage e realizar o upload de documentos.
 - Configurar e utilizar o serviço OCI Generative AI Agent para criar bases de conhecimento e agentes conversacionais.
 - Explorar como implementar a funcionalidade de Retrieval-Augmented Generation (RAG) para consultar documentos personalizados com eficiência e contexto.
 
 <br>
 
 
-## 1️⃣ Criação de Bucket no Object Storage e Upload de PDF
+## 1️⃣ Criação de Bucket no Object Storage e Upload dos documentos
 
 > **ATENÇÃO: Certifique-se de estar na região US Midwest (Chicago)**
 
