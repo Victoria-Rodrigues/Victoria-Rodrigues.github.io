@@ -35,13 +35,9 @@ Clique em **Create Bucket**. Em seguida, insira um nome para o seu bucket. Recom
 
 Após a criação do bucket, clique em seu nome para acessá-lo.
 
-Neste laboratório vamos utilizar os documentos público sobre o Código de Proteção e Defesa do Consumidor, faça o download para seu computador:
+Neste laboratório vamos utilizar os documentos público sobre o Código de Proteção e Defesa do Consumidor, faça o download para seu computador e faça a extração dos arquivos da pasta:
 
-- [Documento 1: Perguntas frequentes sobre Código de Proteção e Defesa do Consumidor](documentos/perguntas%20frequentes%20codigo%20defesa%20do%20consumidor.pdf)
-- [Documento 2: Código de Proteção e Defesa do Consumidor 2025](documentos/Codigo%20de%20defesa%20do%20consumidor%202025.pdf)
-- [Documento 3: Cartilha do Consumidor](documentos/cartilha-do-consumidor-mj.pdf)
-- [Documento 4: Perguntas frequentes sobre Código de Proteção e Defesa do Consumidor - Campinas](documentos/perguntas-frequentes-procon-campinas.html)
-- [Documento 5: Perguntas frequentes sobre Código de Proteção e Defesa do Consumidor - Alagoas](documentos/perguntas-frequentes-procon-alagoas.html)
+- [Documentos sobre Código de Proteção e Defesa do Consumidor](documentos/arquivos-cdc.zip)
 
 Em seguida, acesse o bucket criado anteriormente e clique em **Objects** e **Upload objects**. 
 
