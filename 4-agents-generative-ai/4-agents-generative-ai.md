@@ -214,14 +214,14 @@ Ao clicar em **View Citations**, você expande as referências utilizadas pelo a
 
 Cada citação apresenta as seguintes informações:
 
-> - **Title:** O nome do arquivo PDF de onde a informação foi extraída.
+> - **Title:** O nome do arquivo de onde a informação foi extraída.
 > - **Object storage path:** O caminho do arquivo no armazenamento do OCI.
 > - **Document ID:** Um identificador único do documento.
 > - **Page numbers:** Indica o número da página no documento de onde a informação foi retirada.
 > - **Source text:** Exibe o trecho exato do documento utilizado para compor a resposta do assistente.
 
 
-Laboratório finalizado! Parabéns por concluir todas as etapas. Fique à vontade para criar novas perguntas, explorar a sua aplicação e descobrir ainda mais possibilidades com o seu assistente virtual.
+🎉 Laboratório finalizado! Parabéns por concluir todas as etapas. Fique à vontade para criar novas perguntas, explorar a sua aplicação e descobrir ainda mais possibilidades com o seu assistente virtual.
 
 Você poderá seguir para o próximo laboratório.
 
