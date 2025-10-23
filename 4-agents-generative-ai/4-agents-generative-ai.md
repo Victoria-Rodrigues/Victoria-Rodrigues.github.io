@@ -205,9 +205,6 @@ Exemplos de perguntas para fazer os testes:
     </copy>
 <!-- Separador -->
 
-
-![Questions](images/questions-agent.png)
-
 Ao clicar em **View Citations**, você expande as referências utilizadas pelo assistente para gerar a resposta. 
 
 ![View Citations](images/view-citations.png)
@@ -220,109 +217,16 @@ Cada citação apresenta as seguintes informações:
 > - **Page numbers:** Indica o número da página no documento de onde a informação foi retirada.
 > - **Source text:** Exibe o trecho exato do documento utilizado para compor a resposta do assistente.
 
-Traces
-
-![alt text](image.png)
 
 Laboratório finalizado! Parabéns por concluir todas as etapas. Fique à vontade para criar novas perguntas, explorar a sua aplicação e descobrir ainda mais possibilidades com o seu assistente virtual.
 
 Você poderá seguir para o próximo laboratório.
 
-## 5️⃣ [EXTRA] Embeddings com OCI Generative AI
-
-### ❓**O que são Embeddings?**
-> Embeddings são representações vetoriais de objetos, como textos ou imagens. **Ao transformar objetos em vetores, conseguimos realizar operações matemáticas que permitem comparar, analisar e calcular a similaridade entre eles.** Isso possibilita, por exemplo, identificar semelhanças entre textos ou buscar informações relevantes de forma eficaz.
-
-### 🔍 **Por que Embeddings são importantes?**
->   - **Análise de Similaridade:** Com embeddings, podemos calcular a proximidade entre diferentes objetos, facilitando a identificação de itens semelhantes.
->    - **Eficiência Computacional:** Representar dados em vetores torna o processamento de informações mais rápido e eficiente.
->    - **Versatilidade:** Embeddings podem ser usados em vários contextos, como busca de informações, recomendação de conteúdo, entre outros.
-
-Vamos acessar o Serviço de OCI Generative AI. A forma mais simples de fazer isto é pesquisando por
-**“Generative AI”** na aba de busca:
-
-   ![Search Generative AI](images/search-genai.png " ")
-
-Uma vez dentro do serviço, vamos selecionar **“Embedding”**, no menu do canto esquerdo, abaixo de **“Playground”**.
-
-   ![Acess Playground](images/genai-playground-acess.png " ")
-
-Dentro do PlayGround, vamos na caixa de seleção “model” e vamos selecionar o modelo **cohere.embed-multilingual-v3**, em seguida, adicione as frases abaixo nas caixas brancas disponíveis. Não é necessário que estejam em ordem:
-
-    <copy>
-    Cachorros são animais incríveis.
-    </copy>
-<!-- Separador -->
-
-    <copy>  
-    Eu amo cães, são fantásticos.  
-    </copy>  
-<!-- Separador -->
-
-    <copy>  
-    Cachorros adoram brincar ao ar livre e correr pelo parque.  
-    </copy>  
-<!-- Separador -->
-
-    <copy>  
-    Os gatos são animais elegantes e misteriosos.  
-    </copy>  
-<!-- Separador -->
-
-    <copy>  
-    Gatos são mestres em encontrar os melhores lugares para dormir.  
-    </copy>  
-<!-- Separador -->
-
-    <copy>  
-    Gatos têm uma habilidade incrível de se espremer em espaços pequenos.  
-    </copy>  
-<!-- Separador -->
-
-    <copy>  
-    A Porsche faz carros belíssimos.  
-    </copy>  
-<!-- Separador -->
-
-    <copy>  
-    A Ferrari é conhecida por seus carros velozes.  
-    </copy>  
-<!-- Separador -->
-
-    <copy>  
-    Carros esportivos são feitos para quem busca emoção na estrada.  
-    </copy>  
-<!-- Separador -->
-
-    <copy>  
-    Gatos gostam de se esconder nos carros esportivos, como em uma Ferrari.  
-    </copy>  
-<!-- Separador -->
-
-    <copy>  
-    Cachorros adoram aproveitar o vento enquanto passeiam em carros conversíveis, como um Porsche.  
-    </copy>  
-
-![Embeddings](images/embeddings.png " ")
-
-Em seguida, clique em **Run**.
-
-![Embeddings Response](images/embeddings-response.png " ")
-
-> **Os vetores de embeddings costumam ter muitas dimensões (em geral, entre 512 e 1024 dimensões). Como é impossível visualizar graficamente algo com tantas dimensões, o que costuma ser feito é uma “Projeção” destes vetores multidimensionais em superfícies bidimensionais, permitindo a visualização.**
-
-A proximidade entre os vetores no gráfico representa a **similaridade semântica entre as frases.** Quanto mais próximos dois pontos estão, mais semelhantes são as frases em termos de conteúdo e contexto, de acordo com o modelo de embedding.
-
-Por exemplo:
-   - **Vetores 1, 2, 3, 4, 5 e 6:** As frases sobre características e comportamentos de gatos e cachorros estão agrupadas, refletindo similaridades relacionadas aos animais e suas ações típicas.
-   - **Vetores 7, 8 e 9:** As frases que mencionam carros esportivos e marcas como Ferrari e Porsche estão próximas entre si, já que compartilham temas de automóveis e experiências de direção.
-   - **Vetores 10 e 11:** As frases sobre "gato e Ferrari" e "cachorro e Porsche" estão próximas entre si e dos clusters de carros de luxo, pois combinam comportamentos de animais de estimação com automóveis, unindo ambos os temas.
-
 ## 👥 Agradecimentos
 
-- **Autores** - Isabelle Anjos
-- **Autores Contribuintes** - Caio Oliveira, Gabriela Miyazima, Aristotelles Serra
-- **Última Atualização Por/Data** - Janeiro 2025
+- **Autores** - Victória Rodrigues
+- **Autores Contribuintes** - Isabelle Anjos, Caio Oliveira, Gabriela Miyazima, Aristotelles Serra
+- **Última Atualização Por/Data** - Outubro 2025
 
 ## 🛡️ Declaração de Porto Seguro (Safe Harbor)
 

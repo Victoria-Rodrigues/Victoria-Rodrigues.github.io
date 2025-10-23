@@ -50,7 +50,8 @@ Este laboratório pressupõe que você tenha:
 ## 👥 Agradecimentos
 
 - **Autores** - Victória Rodrigues
-- **Última Atualização Por/Data** - Outubro - 2025
+- **Autores Contribuintes** - Isabelle Anjos
+- **Última Atualização Por/Data** - Outubro 2025
 
 ## 🛡️ Declaração de Porto Seguro (Safe Harbor)
 
