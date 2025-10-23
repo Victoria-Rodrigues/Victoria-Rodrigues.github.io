@@ -160,20 +160,20 @@ Clique no nome do agente e, em seguida, selecione a opção **Launch Chat** para
 
 ## 4️⃣ Interface de Interação com o Assistente Virtual
 
-### **Agente e Endpoint (destacado em azul)**
+### 🔵 **Agente e Endpoint (destacado em azul)**
 
 > - **Agent:** Neste campo você seleciona o agente configurado para responder às suas perguntas. No exemplo, o agente selecionado é o **ai-agent**.
 > <br>
 > - **Agent Endpoint:** O endpoint associado ao agente. Este é o ponto de acesso que conecta o assistente às bases de conhecimento.
 
-### **Área de Chat (destacada em vermelho)**
+### 🔴 **Área de Chat (destacada em vermelho)**
 
 Esta é a área principal onde você pode interagir com o agente. Aqui, o assistente exibe a mensagem de saudação que configuramos e as respostas às suas perguntas.
 
 > -  O campo **Type a message...** é onde você insere suas perguntas. Após digitar, clique em **Submit** para enviar a mensagem.
 > -  O botão **Reset chat session** permite reiniciar a sessão de chat, apagando o histórico atual de interação.
 
-### **Traces (destacado em laranja)**
+### 🟠 **Traces (destacado em laranja)**
 
 > O painel Traces mostra detalhes técnicos de cada interação com o agente, como as **consultas realizadas, os resultados gerados e os detalhes da página e parágrafo cujas informações foram obtidas**. Este recurso é útil para analisar como o assistente processa as perguntas e recupera informações da base de conhecimento.
 
