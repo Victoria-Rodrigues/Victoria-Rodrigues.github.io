@@ -37,13 +37,13 @@ Após a criação do bucket, clique em seu nome para acessá-lo.
 
 Neste laboratório vamos utilizar os documentos público sobre o Código de Proteção e Defesa do Consumidor, faça o download para seu computador e faça a extração dos arquivos da pasta:
 
-- [Documentos sobre Código de Proteção e Defesa do Consumidor](documentos/arquivos-cdc.zip)
+- [Baixar - Documentos sobre Código de Proteção e Defesa do Consumidor](documentos/arquivos-cdc.zip)
 
 Em seguida, acesse o bucket criado anteriormente e clique em **Objects** e **Upload objects**. 
 
 ![Clique Objects](images/bucket-clique-objects.png)
 
-Selecione os arquivos PDFs baixados no seu computador, **clique e arraste para a região delimitada**. Em seguida, clique em **Next** e **Upload Objects**.
+Selecione os arquivos baixados no seu computador, **clique e arraste para a região delimitada**. Em seguida, clique em **Next** e **Upload Objects**.
 
 ![Upload File](images/upload-file.png)
 
