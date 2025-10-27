@@ -13,6 +13,10 @@
     {
       "title": "OCI Generative AI Agent",
       "filename": "4-agents-generative-ai/4-agents-generative-ai.md"
+    },
+    {
+      "title": "MySQL HeatWave + AI Agent",
+      "filename": "5-mysql-heatwave/5-mysql-heatwave.md"
     }
   ]
 }
