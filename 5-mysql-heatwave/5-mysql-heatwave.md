@@ -14,18 +14,18 @@ O que você aprenderá:
 
 - Criar o DB System MySQL.
 - Ativar o cluster analítico do Heatwave.
-- Explorar como implementar a funcionalidade de Retrieval-Augmented Generation (RAG) para consultar documentos personalizados com eficiência e contexto.
+- Explorar como implementar a funcionalidade de Retrieval-Augmented Generation (RAG) para consultar documentos personalizados e dados do banco com eficiência e contexto.
 
 <br>
 
 
-## 1️⃣ Criação de Bucket no Object Storage e Upload dos documentos
+## 1️⃣ Criação do DB System MySQL
 
 > **ATENÇÃO: Certifique-se de estar na região US Midwest (Chicago)**
 
-Na guia do navegador com o OCI aberto, clique no menu de hambúrguer localizado no canto superior esquerdo da tela. Em seguida, selecione **Storage** e depois **Buckets**.
+Na guia do navegador com o OCI aberto, clique no menu de hambúrguer localizado no canto superior esquerdo da tela. Em seguida, selecione **Databases** e depois, na coluna **MySQL HeatWave** clique em  **DB Systems**.
 
-![Buckets](images/buckets.png)
+![Buckets](images/DBSystems.png)
 
 
 Clique em **Create Bucket**. Em seguida, insira um nome para o seu bucket. Recomendamos o nome **bucket-demo-ai-agent**. Finalize clicando em **Create**.
