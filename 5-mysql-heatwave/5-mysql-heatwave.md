@@ -2,18 +2,18 @@
 
 ## 📌 Introdução
 
-Este laboratório orienta você nas etapas para configurar um agente de IA generativa OCI, incluindo a ingestão de uma base de conhecimento no OCI Object Storage.
+Este laboratório orienta você nas etapas para criar um DB System MySQL Heatwave para utilizar como base de conhecimento e motor de IA para utilizar com o OCI Generative AI Agent.
 
 <br>
 
 ### 📌 **Objetivos**
 
-Descubrar como utilizar de forma prática a funcionalidade de busca vetorial do Oracle Generative AI Agents para otimizar consultas em documentos.
+Descubrir como realizar de forma prática a criação, configuração e utilização do MySQL Heatwave e suas funcionalidades de Generative AI.
 
 O que você aprenderá:
 
-- Criar buckets no Object Storage e realizar o upload de documentos.
-- Configurar e utilizar o serviço OCI Generative AI Agent para criar bases de conhecimento e agentes conversacionais.
+- Criar o DB System MySQL.
+- Ativar o cluster analítico do Heatwave.
 - Explorar como implementar a funcionalidade de Retrieval-Augmented Generation (RAG) para consultar documentos personalizados com eficiência e contexto.
 
 <br>
