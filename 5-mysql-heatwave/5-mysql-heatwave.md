@@ -8,7 +8,7 @@ Este laboratório orienta você nas etapas para criar um DB System MySQL Heatwav
 
 ### 📌 **Objetivos**
 
-Descubrir como realizar de forma prática a criação, configuração e utilização do MySQL Heatwave e suas funcionalidades de Generative AI.
+Descubra como realizar de forma prática a criação, configuração e utilização do MySQL Heatwave e suas funcionalidades de Generative AI.
 
 O que você aprenderá:
 
