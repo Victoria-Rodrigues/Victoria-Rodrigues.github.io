@@ -1,7 +1,5 @@
 # Introdução
 
-## Sobre o workshop
-
 A adoção de inteligência artificial generativa nas empresas está revolucionando a maneira como organizações **automatizam processos** e aprimoram a experiência do cliente. No centro dessa transformação estão os agentes virtuais baseados em IA, projetados para interagir com usuários, entender solicitações em linguagem natural, executar tarefas e fornecer respostas contextualizadas de acordo com seus dados de forma **autônoma e personalizada**.
 
 O serviço de **OCI Generative AI Agents** oferece uma solução totalmente gerenciada na Oracle Cloud Infrastructure (OCI) que aproveita poder dos Large Language Models (LLMs) para criar agentes virtuais **altamente eficientes** e aliados com a **modernização do atendimento e processos**.
@@ -29,6 +27,8 @@ Dependendo do caso de uso, você pode adicionar a cada agente as seguintes ferra
 - **Custom API Endpoint Calling Tool**: Integra facilmente com APIs da OCI ou REST APIs customizadas, garantindo muito mais conectividade e flexibilidade.
 
 Para mais informações sobre o serviço acesse a documentação:[Generative AI Agents](https://docs.oracle.com/en-us/iaas/Content/generative-ai-agents/home.htm)
+
+## Sobre o workshop
 
 ### **Objetivos**
 
