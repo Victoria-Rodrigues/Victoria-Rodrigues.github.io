@@ -2,7 +2,7 @@
 
 ## Sobre o workshop
 
-O **OCI Generative AI Agents** é um serviço totalmente gerenciado que integra Large Language Model (LLMs) para criar agentes virtuais inteligentes. Esses agentes proporcionam experiências personalizadas e contextualizadas aos usuários. 
+O **OCI Generative AI Agents** é um serviço totalmente gerenciado que combina LLMs, Retrieval Augmented Generation (RAG) e  orquestrador de tools, possibilitando a criação de agentes para criar agentes virtuais inteligentes. Esses agentes proporcionam **experiências personalizadas e contextualizadas** aos usuários. 
 
 A utilização da abordagem **RAG (Retrieval-Augmented Generation)** permite que os agentes combinem geração de linguagem natural com recuperação de informações em bases de dados corporativos. Essa integração aprimora significativamente os **chatbots**, tornando-os capazes de oferecer respostas precisas, baseadas em contexto e alinhadas aos dados reais da organização.
 
