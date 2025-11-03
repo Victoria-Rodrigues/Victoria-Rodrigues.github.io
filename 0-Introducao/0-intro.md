@@ -2,13 +2,11 @@
 
 ## Sobre o workshop
 
-A adoção de inteligência artificial generativa nas empresas está revolucionando a maneira como organizações **automatizam processos** e aprimoram a experiência do cliente. No centro dessa transformação estão os agents — agentes virtuais baseados em IA, projetados para interagir com usuários, entender solicitações em linguagem natural, executar tarefas e fornecer respostas contextualizadas com seus dados de forma **autônoma e personalizada**.
+A adoção de inteligência artificial generativa nas empresas está revolucionando a maneira como organizações **automatizam processos** e aprimoram a experiência do cliente. No centro dessa transformação estão os agentes virtuais baseados em IA, projetados para interagir com usuários, entender solicitações em linguagem natural, executar tarefas e fornecer respostas contextualizadas de acordo com seus dados de forma **autônoma e personalizada**.
 
-O serviço de **OCI Generative AI Agents** oferece uma solução totalmente gerenciada na Oracle Cloud Infrastructure (OCI) que aproveita poder dos Large Language Models (LLMs) para criar agents virtuais **altamente eficientes** e aliados com a **modernização do atendimento e processos**.
+O serviço de **OCI Generative AI Agents** oferece uma solução totalmente gerenciada na Oracle Cloud Infrastructure (OCI) que aproveita poder dos Large Language Models (LLMs) para criar agentes virtuais **altamente eficientes** e aliados com a **modernização do atendimento e processos**.
 
-### **Recursos principais**
-
-Com funcionalidades avançadas, o OCI Generative AI Agents oferece uma experiência poderosa e eficiente.
+Alguns recursos interessantes sobre o serviço:
 
 - **Integração de dados e canais de interação:** Suporte a chat e API, facilitando a interação entre usuários e agentes.  
 - **Respostas contextualmente relevantes:** As respostas são geradas com base em consultas inteligentes à base de conhecimento, garantindo precisão e contexto.  
@@ -20,11 +18,11 @@ Com funcionalidades avançadas, o OCI Generative AI Agents oferece uma experiên
 
 Dependendo do caso de uso, você pode adicionar a cada agente as seguintes ferramentas:
 
-- **SQL Tool**: Transforma comandos em linguagem natural em consultas SQL para extração de dados em bancos conectados.
+- **SQL Tool**: Transforma comandos de linguagem natural em consultas SQL para extração de dados nos bancos conectados.
 
 - **RAG Tool**: Recupera informações de uma ou mais bases de conhecimento para obter os melhores contexto para suas respostas utilizando linguagem natural.
 
-- **Agent Tool**: Orquestra uma rede de multi-agents especializados, colaborando na execução de tarefas mais complexas.
+- **Agent Tool**: Orquestra uma rede de multi-agentes especializados, colaborando na execução de tarefas mais complexas.
 
 - **Custom Function Calling Tool**: Permite ao agente acionar funções definidas pelo usuário, expandindo as possibilidades de automação e resposta de acordo com as necessidades do negócio.
 
@@ -33,7 +31,7 @@ Dependendo do caso de uso, você pode adicionar a cada agente as seguintes ferra
 Para mais informações sobre o serviço acesse a documentação:[Generative AI Agents](https://docs.oracle.com/en-us/iaas/Content/generative-ai-agents/home.htm)
 
 
-Neste laboratório, vamos explorar a utilização do OCI Generative AI Agent em conjunto com a ferramenta RAG. A técnica de RAG permite que os **agents recuperem informações em suas bases de dados**, fornecendo **contextos relevantes e atualizados** para a reformulação das respostas finais. Essa integração aprimora significativamente a atuação dos chatbots, tornando-os capazes de oferecer **respostas mais precisas, contextualizadas e alinhadas** aos dados reais da organização.
+Neste laboratório, vamos explorar a utilização do OCI Generative AI Agent em conjunto com a ferramenta RAG. A técnica de RAG permite que o **agente recupere informações em suas bases de dados**, fornecendo **contextos relevantes e atualizados** para a reformulação das respostas finais. Essa integração aprimora significativamente a atuação dos chatbots, tornando-os capazes de oferecer **respostas mais precisas, contextualizadas e alinhadas** aos dados reais da organização.
 
 
 ![Buckets](images/fluxo-ai-agent.png)
