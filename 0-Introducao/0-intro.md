@@ -2,15 +2,14 @@
 
 ## Sobre o workshop
 
-O **OCI Generative AI Agents** é um serviço totalmente gerenciado que combina LLMs, Retrieval Augmented Generation (RAG) e  orquestrador de tools, possibilitando a criação de agentes para criar agentes virtuais inteligentes. Esses agentes proporcionam **experiências personalizadas e contextualizadas** aos usuários. 
+A adoção de inteligência artificial generativa nas empresas está revolucionando a maneira como organizações **automatizam processos** e aprimoram a experiência do cliente. No centro dessa transformação estão os agents — agentes virtuais baseados em IA, projetados para interagir com usuários, entender solicitações em linguagem natural, executar tarefas e fornecer respostas contextualizadas com seus dados de forma **autônoma e personalizada**.
 
-A utilização da abordagem **RAG (Retrieval-Augmented Generation)** permite que os agentes combinem geração de linguagem natural com recuperação de informações em bases de dados corporativos. Essa integração aprimora significativamente os **chatbots**, tornando-os capazes de oferecer respostas precisas, baseadas em contexto e alinhadas aos dados reais da organização.
-
-![Buckets](images/fluxo-ai-agent.png)
-
+O serviço de **OCI Generative AI Agents** oferece uma solução totalmente gerenciada na Oracle Cloud Infrastructure (OCI) que aproveita poder dos Large Language Models (LLMs) para criar agents virtuais **altamente eficientes** e aliados com a **modernização do atendimento e processos**.
 
 ### **Recursos principais**
+
 Com funcionalidades avançadas, o OCI Generative AI Agents oferece uma experiência poderosa e eficiente.
+
 - **Integração de dados e canais de interação:** Suporte a chat e API, facilitando a interação entre usuários e agentes.  
 - **Respostas contextualmente relevantes:** As respostas são geradas com base em consultas inteligentes à base de conhecimento, garantindo precisão e contexto.  
 - **Pesquisa híbrida:** Combina métodos léxicos e semânticos para alcançar maior assertividade nas respostas.  
@@ -19,7 +18,25 @@ Com funcionalidades avançadas, o OCI Generative AI Agents oferece uma experiên
 - **Interpretação de elementos visuais:** Capacidade de interpretar gráficos e tabelas em PDFs sem necessidade de descrições adicionais.  
 - **Hiperlinks automáticos:** Os links presentes nos documentos são automaticamente extraídos e incluídos nas respostas.  
 
-<br>
+Dependendo do caso de uso, você pode adicionar a cada agente as seguintes ferramentas:
+
+- **SQL Tool**: Transforma comandos em linguagem natural em consultas SQL para extração de dados em bancos conectados.
+
+- **RAG Tool**: Recupera informações de uma ou mais bases de conhecimento para obter os melhores contexto para suas respostas utilizando linguagem natural.
+
+- **Agent Tool**: Orquestra uma rede de multi-agents especializados, colaborando na execução de tarefas mais complexas.
+
+- **Custom Function Calling Tool**: Permite ao agente acionar funções definidas pelo usuário, expandindo as possibilidades de automação e resposta de acordo com as necessidades do negócio.
+
+- **Custom API Endpoint Calling Tool**: Integra facilmente com APIs da OCI ou REST APIs customizadas, garantindo muito mais conectividade e flexibilidade.
+
+Para mais informações sobre o serviço acesse a documentação:[Generative AI Agents](https://docs.oracle.com/en-us/iaas/Content/generative-ai-agents/home.htm)
+
+
+Neste laboratório, vamos explorar a utilização do OCI Generative AI Agent em conjunto com a ferramenta RAG. A técnica de RAG permite que os **agents recuperem informações em suas bases de dados**, fornecendo **contextos relevantes e atualizados** para a reformulação das respostas finais. Essa integração aprimora significativamente a atuação dos chatbots, tornando-os capazes de oferecer **respostas mais precisas, contextualizadas e alinhadas** aos dados reais da organização.
+
+
+![Buckets](images/fluxo-ai-agent.png)
 
 ### **Objetivos**
 
@@ -29,10 +46,9 @@ O objetivo desse laborátorio é aprender como podemos construir em poucos passo
 
 ### **O que você vai aprender?**
 
-1. Aplicar as politicas necessárias.
-2. Criar um bucket e carregar os arquivos.
-3. Criar uma base de conhecimento para agente.
-4. Criar o agente e configurar o RAG Tools.
+1. Criação de duas bases de conhecimento utilizando o bucket e banco de dados MySQL HeatWave.
+2. Criação do Agent.
+4. Configuração do RAG Tools no Agent.
 5. Acessar e testar o agente. 
 
 <br>
