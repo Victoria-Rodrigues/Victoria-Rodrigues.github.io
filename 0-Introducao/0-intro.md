@@ -30,15 +30,18 @@ Dependendo do caso de uso, você pode adicionar a cada agente as seguintes ferra
 
 Para mais informações sobre o serviço acesse a documentação:[Generative AI Agents](https://docs.oracle.com/en-us/iaas/Content/generative-ai-agents/home.htm)
 
+### **Objetivos**
 
 Neste laboratório, vamos explorar a utilização do OCI Generative AI Agent em conjunto com a ferramenta RAG. A técnica de RAG permite que o **agente recupere informações em suas bases de dados**, fornecendo **contextos relevantes e atualizados** para a reformulação das respostas finais. Essa integração aprimora significativamente a atuação dos chatbots, tornando-os capazes de oferecer **respostas mais precisas, contextualizadas e alinhadas** aos dados reais da organização.
+
+O conjunto de dados acessado pelo agente é denominado **base de conhecimento**. Neste laboratório, utilizaremos o **Object Storage** e o **MySQL HeatWave** como fontes dessa base. O Object Storage permite armazenar documentos, arquivos e conteúdos estruturados ou não estruturados. Já o MySQL HeatWave é o único serviço MySQL totalmente gerenciado que combina funcionalidades de transações, análises, aprendizado de máquina e serviços GenAI. Vamos explorar como utilizar o armazenamento vetorial do MySQL HeatWave para compor a base de conhecimento, potencializando ainda mais a precisão e a riqueza das respostas fornecidas pelos agentes.
 
 
 ![Buckets](images/fluxo-ai-agent.png)
 
-### **Objetivos**
 
-O objetivo desse laborátorio é aprender como podemos construir em poucos passos um agente conversacional utilizando os documentos da sua base de conhecimento utilizando o serviço de OCI Generative AI Agent.
+Vamos utilizar duas bases de conhecimento, o bucket e o banco de dados MySQL HeatWave. 
+
 
 <br>
 
