@@ -40,17 +40,16 @@ O conjunto de dados acessado pelo agente é denominado **base de conhecimento**.
 ![Buckets](images/fluxo-ai-agent.png)
 
 
-Vamos utilizar duas bases de conhecimento, o bucket e o banco de dados MySQL HeatWave. 
-
-
 <br>
 
 ### **O que você vai aprender?**
 
-1. Criação de duas bases de conhecimento utilizando o bucket e banco de dados MySQL HeatWave.
-2. Criação do Agent.
-4. Configuração do RAG Tools no Agent.
-5. Acessar e testar o agente. 
+- Criação de um bucket e upload dos arquivos.
+- Criação da instância do MySQL Heatwave e configuração da base vetorizada.
+- Criação do Agent.
+- Criação e configuração da base de conhecimento no Agente.
+- Acessar e testar o agente. 
+
 
 <br>
 
@@ -60,7 +59,7 @@ Este laboratório pressupõe que você tenha:
 
 - Uma conta Oracle Cloud
 - Acesso a uma região onde o serviço de agente está disponível: **Ashburn, São Paulo, Frankfurt, Osaka, London, Chicago e Phoenix.** [Lista das regiões disponíveis](https://docs.oracle.com/en-us/iaas/Content/generative-ai-agents/overview.htm#regions) 
-- Deve ter uma conta de administrador ou permissões para gerenciar alguns serviços da OCI: Policies, Generative AI Agents e Object Storage    
+- Deve ter uma conta de administrador ou permissões para gerenciar alguns serviços da OCI: Policies, Generative AI Agents, Object Storage e MySQL Heatwave.    
 
 <br>
 
