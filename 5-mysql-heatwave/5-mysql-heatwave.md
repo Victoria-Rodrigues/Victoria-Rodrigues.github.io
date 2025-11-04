@@ -2,7 +2,7 @@
 
 ## 📌 Introdução
 
-Este laboratório orienta você nas etapas para criar um DB System MySQL Heatwave para utilizar como base de conhecimento e motor de IA para utilizar com o OCI Generative AI Agent.
+EsNeste laboratório, você preparará a infraestrutura necessária para executar o restante do workshop. Criaremos/configuraremos os seguintes elementos: uma Rede Virtual em Nuvem, o Banco de Dados MySQL e o Cluster HeatWave.
 
 <br>
 
@@ -12,26 +12,30 @@ Descubra como realizar de forma prática a criação, configuração e utilizaç
 
 O que você aprenderá:
 
-- Criar o DB System MySQL.
-- Ativar o cluster analítico do Heatwave.
-- Explorar como implementar a funcionalidade de Retrieval-Augmented Generation (RAG) para consultar documentos personalizados e dados do banco com eficiência e contexto.
+- Crie uma VCN (Virtual Cloud Network) que ajude você a definir sua própria topologia de rede de data center dentro da Oracle Cloud.
+- Crie o próprio banco de dados MySQL.
+- Ative o cluster analítico do Heatwave.
+
+Pré-requisitos:
+
+- Conta de avaliação gratuita da Oracle.
 
 <br>
 
 
-## 1️⃣ Criação do DB System MySQL
+## 1️⃣ Crie uma Rede Virtual na Nuvem e permita o tráfego pela porta do Serviço de Banco de Dados MySQL.  
 
 > **ATENÇÃO: Certifique-se de estar na região US Midwest (Chicago)**
 
-Na guia do navegador com o OCI aberto, clique no menu de hambúrguer localizado no canto superior esquerdo da tela. Em seguida, selecione **Databases** e depois, na coluna **MySQL HeatWave** clique em  **DB Systems**.
+Faça login em seu tenant do OCI. No **menu de navegação**, selecione **Networking > Virtual cloud networks**.
 
-![Buckets](images/DBSystems.png)
+![open_VCN](images/VCN01.png)
 
 
-Clique em **Create Bucket**. Em seguida, insira um nome para o seu bucket. Recomendamos o nome **bucket-demo-ai-agent**. Finalize clicando em **Create**.
+Selecione seu compartimento na lista e clique em **Start VCN Wizard**.
+> **Observação: Se você não selecionou um compartimento, pode selecionar o compartimento raiz, que foi criado por padrão quando você criou sua tenancy (ou seja, quando se registrou para a conta de avaliação). É possível criar tudo no compartimento raiz, mas a Oracle recomenda que você crie subcompartimentos para ajudar a gerenciar seus recursos com mais eficiência.**
 
-![Create Buckets](images/bucket.png)
-![Create Buckets](images/create-buckets.png)
+![VCN Wizard](images/VCN02.png)
 
 Após a criação do bucket, clique em seu nome para acessá-lo.
 
