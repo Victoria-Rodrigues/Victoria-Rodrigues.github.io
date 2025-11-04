@@ -39,15 +39,19 @@ Selecione seu compartimento na lista e clique em **Start VCN Wizard**.
 
 
 Selecione **Create VCN with Internet Connectivity** e clique em **Start VCN Wizard**.
+
 ![VCN Wizard Internet](images/VCN03.png)
 
 No campo **VCN Name**, insira um nome para esta VCN e certifique-se de que o compartimento selecionado seja o correto. Mantenha as configurações padrão e clique em **Next**.
+
 ![VCN Wizard - VCN Name](images/VCN04.png)
 
 Analise as informações e clique em **Create**.
+
 ![VCN Wizard - Create](images/VCN05.png)
 
 Após a criação da VCN, em **Subnets**, clique em **private subnet-< nome da VCN >**.
+
 ![VCN Config - Subnet Private Network](images/VCN06.png)
 
 
