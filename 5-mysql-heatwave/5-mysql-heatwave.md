@@ -71,9 +71,7 @@ Adicione a regra necessária à lista de segurança padrão para permitir o trá
 
 Source CIDR:
 
-    <copy>
     0.0.0.0/0
-    </copy>
 
 Destination Port Range: 
 
