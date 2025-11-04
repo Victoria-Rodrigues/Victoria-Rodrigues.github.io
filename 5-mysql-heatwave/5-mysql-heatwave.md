@@ -29,7 +29,7 @@ Pré-requisitos:
 
 Faça login em seu tenant do OCI. No **menu de navegação**, selecione **Networking > Virtual cloud networks**.
 
-![open_VCN](images/VCN01.png)
+![Open VCN](images/VCN01.png)
 
 
 Selecione seu compartimento na lista e clique em **Start VCN Wizard**.
@@ -37,23 +37,19 @@ Selecione seu compartimento na lista e clique em **Start VCN Wizard**.
 
 ![VCN Wizard](images/VCN02.png)
 
-Após a criação do bucket, clique em seu nome para acessá-lo.
 
-Neste laboratório vamos utilizar os documentos público sobre o Código de Proteção e Defesa do Consumidor, faça o download para seu computador e faça a extração dos arquivos da pasta:
+Selecione **Create VCN with Internet Connectivity** e clique em **Start VCN Wizard**.
+![VCN Wizard Internet](images/VCN03.png)
 
-- [Baixar - Documentos sobre Código de Proteção e Defesa do Consumidor](documentos/arquivos-cdc.zip)
+No campo **VCN Name**, insira um nome para esta VCN e certifique-se de que o compartimento selecionado seja o correto. Mantenha as configurações padrão e clique em **Next**.
+![VCN Wizard - VCN Name](images/VCN04.png)
 
-Em seguida, acesse o bucket criado anteriormente e clique em **Objects** e **Upload objects**. 
+Analise as informações e clique em **Create**.
+![VCN Wizard - Create](images/VCN05.png)
 
-![Clique Objects](images/bucket-clique-objects.png)
+Após a criação da VCN, em **Subnets**, clique em **private subnet-<nome da VCN>**.
+![VCN Config - Subnet Private Network](images/VCN06.png)
 
-Selecione os arquivos baixados no seu computador, **clique e arraste para a região delimitada**. Em seguida, clique em **Next** e **Upload Objects**.
-
-![Upload File](images/upload-file.png)
-
- O arquivo deve aparecer em seu bucket como na imagem identificada abaixo.
-
-![Bucket PDF](images/bucket-pdf.png)
 
 ## 2️⃣ Criação da Base de Conhecimento (Knowledge Base)
 
