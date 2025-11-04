@@ -119,6 +119,38 @@ Selecione **HeatWave.512GB** e clique em **Select a shape**.
 
 ![Criação do DB Systems](images/MySQL05.png)
 
+Atualize os nós para **2**.
+
+![Criação do DB Systems](images/MySQL06.png)
+
+Na seção **Storage size** atualize o **Initial data storage size (GB)** para **1024**.
+
+![Criação do DB Systems](images/MySQL07.png)
+
+Na seção **Configure backup plan**, mantenha a janela de backup padrão de 7 dias. Desative a opção **Enable point-in-time recovery**.
+
+![Criação do DB Systems](images/MySQL08.png)
+
+Deslize a tela para baixo e clique em **Show advanced option**.
+
+![Criação do DB Systems](images/MySQL09.png)
+
+Acesse a aba **Connections** e insira o seguinte:
+
+Hostname: mysql-lakehouse
+
+Database port: 3306
+
+Database X protocol port: 33060
+
+Após concluir, clique em **Create**.
+
+![Criação do DB Systems](images/MySQL10.png)
+
+O sistema de banco de dados MySQL estará no estado **CREATING**.
+
+![Criação do DB Systems](images/MySQL11.png)
+
 
 
 ## 3️⃣ Criação do Agente de IA
