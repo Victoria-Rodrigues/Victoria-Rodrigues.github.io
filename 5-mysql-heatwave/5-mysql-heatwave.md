@@ -84,14 +84,18 @@ Description:
 ![VCN Config - Add Ingress Rules](images/VCN09.png)
 
 
-## 2️⃣ Criação da Base de Conhecimento (Knowledge Base)
+## 2️⃣ Criar banco de dados MySQL
 
-Clique no menu de hambúrguer localizado no canto superior esquerdo da tela. Em seguida, selecione **Analytics & AI** e depois **Generative AI Agents**.
+No console, clique em **Menu de navegação > Databases > DB Systems**.
 
-![Menu Agents](images/menu-agents.png)
+![Menu DB Systems](images/MySQL01.png)
 
-Na página inicial do serviço, no menu à esquerda, selecione a opção **Knowledge Bases**.
 
+Clique em **Create DB System**.
+
+Como se trata de experimentação, escolha Desenvolvimento ou Teste .
+
+Verifique o compartimento; ele deve ser o mesmo compartimento em que você criou a VCN e atribua um nome ao sistema de banco de dados
 ![Knowledge Menu](images/knowledge-menu.png)
 
 Selecione **Create Knowledge Base**, conforme indicado abaixo.
