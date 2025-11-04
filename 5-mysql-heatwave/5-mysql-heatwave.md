@@ -107,7 +107,17 @@ Em **Configure Netwrok**, certifique-se de selecionar a mesma VCN e a mesma subn
 
 ![Criação do DB Systems](images/MySQL03.png)
 
-Confirme se na seção **Configure hardware**, a opção **Enable HeatWave cluster** está habilitada. Altere o formato do MySQL para **MySQL.16**.
+Confirme se na seção **Configure hardware** a opção **Enable HeatWave cluster** está habilitada. 
+
+Altere o shape do MySQL para **MySQL.16**.
+
+![Criação do DB Systems](images/MySQL04.png)
+
+Clique em **Configure HeatWave cluster** e, em seguida, clique em **Change Shape**.
+
+Selecione **HeatWave.512GB** e clique em **Select a shape**.
+
+![Criação do DB Systems](images/MySQL05.png)
 
 
 
