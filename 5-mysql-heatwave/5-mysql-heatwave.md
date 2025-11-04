@@ -75,15 +75,11 @@ Source CIDR:
 
 Destination Port Range: 
 
-    <copy>
     3306, 33060
-    </copy>
 
 Description:
 
-    <copy>
     MySQL Ports
-    </copy>
 
 ![VCN Config - Add Ingress Rules](images/VCN09.png)
 
