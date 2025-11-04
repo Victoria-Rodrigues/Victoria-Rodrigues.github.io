@@ -96,38 +96,20 @@ Clique em **Create DB System**.
 Como se trata de experimentação, escolha Desenvolvimento ou Teste .
 
 Verifique o compartimento; ele deve ser o mesmo compartimento em que você criou a VCN e atribua um nome ao sistema de banco de dados
-![Knowledge Menu](images/knowledge-menu.png)
 
-Selecione **Create Knowledge Base**, conforme indicado abaixo.
+![Criação do DB Systems](images/MySQL02.png)
 
-![Create Knowledge](images/create-knowledge.png)
+Na seção **Create administrator credentials**, insira o nome de usuário e escolha uma senha, mas certifique-se de anotá-la, pois você a usará mais tarde
 
-Nesta tela, siga os passos abaixo:  
-1. Insira o nome da sua base de conhecimento. Recomendamos utilizar **kb-ai-agent**.  
-2. No campo **Data Source Type**, selecione a opção **Object Storage**.  
-3. Selecione a opção **Enable Hybrid Search**, que combina pesquisa semântica (busca baseada no significado e contexto) e pesquisa lexical (busca por correspondência exata de termos), garantindo resultados mais precisos e relevantes.
-4. Clique em **Specify Data Source** para configurar os arquivos que serão utilizados pelo Agent.  
+Na **Setup** , selecione **Standalone** .
 
-![Informations Knowledge](images/informations-knowledge.png)
+Em **Configure Netwrok**, certifique-se de selecionar a mesma VCN e a mesma subnet privada criada anteriormente.
 
-Na tela seguinte, vamos definir o **Data Source**. Siga os passos abaixo:
-1.  Insira o nome da sua fonte de dados. Recomendamos utilizar **kb-agent-ai**
-2.  Marque a opção **Enable Multi-Modal Parsing** para permitir a interpretação de gráficos, tabelas e outros elementos visuais dos documentos.
-3.  Em Select bucket, escolha o bucket previamente criado (neste exemplo, bucket-demo-ai-agent).
-4.  Marque a caixa **Select all in bucket**. 
-5.  Clique em **Create** para finalizar a criação da fonte de dados.
+![Criação do DB Systems](images/MySQL03.png)
 
-![Data Source](images/data-source.png)
+Confirme se na seção **Configure hardware**, a opção **Enable HeatWave cluster** está habilitada. Altere o formato do MySQL para **MySQL.16**.
 
-Na tela de criação da base de conhecimento, marque a opção **Automatically start ingestion job for above data sources**. Em seguida, clique em **Create**.
 
-![Creating Knowledge Base](images/creating-knowledge-base.png)
-
-Verifique as mensagens no canto superior direito, indicando o sucesso na criação da base de conhecimento, da fonte de dados e do job de ingestão.
-
-![Sucess Messages](images/sucess-messages.png)
-
-O status da base de conhecimento aparecerá como **Creating** até que o processo seja concluído, cuja média de tempo é de **3-5 minutos**. Aguarde a finalização antes de prosseguir.
 
 ## 3️⃣ Criação do Agente de IA
 
