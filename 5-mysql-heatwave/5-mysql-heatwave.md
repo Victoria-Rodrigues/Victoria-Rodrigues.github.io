@@ -68,17 +68,21 @@ Em **Security rules**, clique em **Add Ingress Rules**.
 ![VCN Config - Ingress Rules](images/VCN08.png)
 
 Adicione a regra necessária à lista de segurança padrão para permitir o tráfego pela porta do serviço MySQL HeatWave e clique em **Add Ingress Rules**.
+
 Source CIDR:
+
     <copy>
     0.0.0.0/0
     </copy>
 
 Destination Port Range: 
+
     <copy>
     3306, 33060
     </copy>
 
 Description:
+
     <copy>
     MySQL Ports
     </copy>
