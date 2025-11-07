@@ -75,7 +75,7 @@ Source CIDR:
 
 Destination Port Range: 
 
-    3306, 33060
+    3306,33060
 
 Description:
 
