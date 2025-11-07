@@ -1,4 +1,4 @@
-# Configuração do Oracle Free Tier 
+# Configuração do Oracle Cloud
 
 ## 📌 Introdução
 
@@ -13,10 +13,6 @@ A [**Oracle Cloud**](https://www.oracle.com/br/cloud/) é uma plataforma de infr
 
 - **Documentação da Oracle Cloud**: [Documentação da Oracle Cloud](https://docs.oracle.com/en/cloud/)
 - **Tutoriais**: Explore o [Centro de Aprendizado da Oracle](https://mylearn.oracle.com/ou/home)
-
-
-### _**Aproveite sua experiência na Oracle Cloud!**_
-
 
 ## 2️⃣ Ativação da Conta
 
