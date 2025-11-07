@@ -14,7 +14,7 @@ A [**Oracle Cloud**](https://www.oracle.com/br/cloud/) é uma plataforma de infr
 - **Documentação da Oracle Cloud**: [Documentação da Oracle Cloud](https://docs.oracle.com/en/cloud/)
 - **Tutoriais**: Explore o [Centro de Aprendizado da Oracle](https://mylearn.oracle.com/ou/home)
 
-## 2️⃣ Ativação da Conta
+## 1️⃣ Ativação da Conta
 
 Você receberá um e-mail semelhante ao exemplo abaixo. Caso não encontre, verifique se ele não está na pasta de spam. Em seguida, clique em **"Activate Your Account"** para continuar:
 
@@ -52,6 +52,7 @@ Configure o aplicativo de autenticação:
 
 ![Auth Application](images/auth-app.png " ")
 
+
 Conclua o processo de configuração:
    - Após o aplicativo ser vinculado, você verá uma confirmação na tela com a mensagem **Successfully Enrolled**.
    - Clique em **Done** para finalizar o processo.
@@ -63,6 +64,29 @@ Após o login, você será redirecionado para o painel da Oracle Cloud.
 
 ![acesso-tenancy](acesso-tenancy.png)
 
+## 2️⃣ Acessar a conta 
+
+Se você já realizou a ativação sua conta, basta acessar https://cloud.oracle.com/
+
+No campo **Cloud Account Name** insira o nome do Account Name presente no e-mail de ativação.
+
+![alt text](image-1.png)
+
+Exemplo de onde encontrar o **Cloud Account / Tenancy** no e-mail:
+
+![alt text](image-2.png)
+
+Insira seu email e senha
+
+![alt text](image-3.png)
+
+Você receberá uma **notificação** no dispositivo configurado com o **Oracle Mobile Authenticator**. Abra a notificação e toque em **Allow** para continuar o login.
+
+![Cellphone Acess](images/cell-auth.png " ")
+
+Após o login, você será redirecionado para o painel da Oracle Cloud.
+
+![alt text](image-4.png)
 
 ## 👥 Agradecimentos
 

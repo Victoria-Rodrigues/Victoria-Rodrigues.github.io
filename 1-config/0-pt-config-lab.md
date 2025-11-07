@@ -124,29 +124,33 @@ Conclua o processo de configuração:
 
 ## 4️⃣ Acesso à conta
 
-Após realizar o processo de configuração de dois fatores você será direcionado para a tela de login. Insira seu **e-mail** e **senha** cadastrados, em seguida, clique em **Sign In** para prosseguir.
+Se você já realizou a ativação sua conta, basta acessar https://cloud.oracle.com/
 
-![Default Acess](images/default-acess.png " ")
+No campo **Cloud Account Name** insira o nome do Account Name presente no e-mail de ativação.
+
+![alt text](image-1.png)
+
+Exemplo de onde encontrar o **Cloud Account / Tenancy** no e-mail:
+
+![alt text](image-2.png)
+
+Insira seu email e senha
+
+![alt text](image-3.png)
 
 Você receberá uma **notificação** no dispositivo configurado com o **Oracle Mobile Authenticator**. Abra a notificação e toque em **Allow** para continuar o login.
 
 ![Cellphone Acess](images/cell-auth.png " ")
 
 Após o login, você será redirecionado para o painel da Oracle Cloud.
-  - Verifique se a **região selecionada** no canto superior direito é "US Midwest (Chicago)"
-  - No painel, você pode visualizar seus créditos restantes e acessar os links para os serviços.
 
-![OCI Panel](images/oci-panel.png " ")
+![alt text](image-4.png)
 
-
-## 5️⃣ Sumário
-
-Com sua conta Oracle Cloud Free Tier configurada, agora você pode prosseguir com qualquer laboratório técnico na OCI. **Explore ao máximo seus créditos gratuitos para descobrir tudo o que a Oracle Cloud tem a oferecer!**
 
 ## 👥 Agradecimentos
 
-- **Autores** - Caio Oliveira
-- **Autor Contribuinte** - Isabelle Anjos
+- **Autores** - 
+- **Autor Contribuinte** - Isabelle Anjos,Caio Oliveira
 - **Última Atualização Por/Data** - Outubro 2024
 
 ## 🛡️ Declaração de Porto Seguro (Safe Harbor)
