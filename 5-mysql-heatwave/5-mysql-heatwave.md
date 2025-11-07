@@ -2,7 +2,7 @@
 
 ## 📌 Introdução
 
-Este laboratório orienta você nas etapas para criar um DB System MySQL Heatwave para utilizar como base de conhecimento e motor de IA para utilizar com o OCI Generative AI Agent.
+EsNeste laboratório, você preparará a infraestrutura necessária para executar o restante do workshop. Criaremos/configuraremos os seguintes elementos: uma Rede Virtual em Nuvem, o Banco de Dados MySQL e o Cluster HeatWave.
 
 <br>
 
@@ -12,220 +12,149 @@ Descubra como realizar de forma prática a criação, configuração e utilizaç
 
 O que você aprenderá:
 
-- Criar o DB System MySQL.
-- Ativar o cluster analítico do Heatwave.
-- Explorar como implementar a funcionalidade de Retrieval-Augmented Generation (RAG) para consultar documentos personalizados e dados do banco com eficiência e contexto.
+- Crie uma VCN (Virtual Cloud Network) que ajude você a definir sua própria topologia de rede de data center dentro da Oracle Cloud.
+- Crie o próprio banco de dados MySQL.
+- Ative o cluster analítico do Heatwave.
+
+Pré-requisitos:
+
+- Conta de avaliação gratuita da Oracle.
 
 <br>
 
 
-## 1️⃣ Criação do DB System MySQL
+## 1️⃣ Crie uma Rede Virtual na Nuvem e permita o tráfego pela porta do Serviço de Banco de Dados MySQL.  
 
 > **ATENÇÃO: Certifique-se de estar na região US Midwest (Chicago)**
 
-Na guia do navegador com o OCI aberto, clique no menu de hambúrguer localizado no canto superior esquerdo da tela. Em seguida, selecione **Databases** e depois, na coluna **MySQL HeatWave** clique em  **DB Systems**.
+Faça login em seu tenant do OCI. No **menu de navegação**, selecione **Networking > Virtual cloud networks**.
 
-![Buckets](images/DBSystems.png)
+![Open VCN](images/VCN01.png)
 
 
-Clique em **Create Bucket**. Em seguida, insira um nome para o seu bucket. Recomendamos o nome **bucket-demo-ai-agent**. Finalize clicando em **Create**.
+Selecione seu compartimento na lista e clique em **Start VCN Wizard**.
+> **Observação: Se você não selecionou um compartimento, pode selecionar o compartimento raiz, que foi criado por padrão quando você criou sua tenancy (ou seja, quando se registrou para a conta de avaliação). É possível criar tudo no compartimento raiz, mas a Oracle recomenda que você crie subcompartimentos para ajudar a gerenciar seus recursos com mais eficiência.**
 
-![Create Buckets](images/bucket.png)
-![Create Buckets](images/create-buckets.png)
+![VCN Wizard](images/VCN02.png)
 
-Após a criação do bucket, clique em seu nome para acessá-lo.
 
-Neste laboratório vamos utilizar os documentos público sobre o Código de Proteção e Defesa do Consumidor, faça o download para seu computador e faça a extração dos arquivos da pasta:
+Selecione **Create VCN with Internet Connectivity** e clique em **Start VCN Wizard**.
 
-- [Baixar - Documentos sobre Código de Proteção e Defesa do Consumidor](documentos/arquivos-cdc.zip)
+![VCN Wizard Internet](images/VCN03.png)
 
-Em seguida, acesse o bucket criado anteriormente e clique em **Objects** e **Upload objects**. 
 
-![Clique Objects](images/bucket-clique-objects.png)
+No campo **VCN Name**, insira um nome para esta VCN e certifique-se de que o compartimento selecionado seja o correto. Mantenha as configurações padrão e clique em **Next**.
 
-Selecione os arquivos baixados no seu computador, **clique e arraste para a região delimitada**. Em seguida, clique em **Next** e **Upload Objects**.
+![VCN Wizard - VCN Name](images/VCN04.png)
 
-![Upload File](images/upload-file.png)
 
- O arquivo deve aparecer em seu bucket como na imagem identificada abaixo.
+Analise as informações e clique em **Create**.
 
-![Bucket PDF](images/bucket-pdf.png)
+![VCN Wizard - Create](images/VCN05.png)
 
-## 2️⃣ Criação da Base de Conhecimento (Knowledge Base)
 
-Clique no menu de hambúrguer localizado no canto superior esquerdo da tela. Em seguida, selecione **Analytics & AI** e depois **Generative AI Agents**.
+Após a criação da VCN, em **Subnets**, clique em **private subnet-< nome da VCN >**.
 
-![Menu Agents](images/menu-agents.png)
+![VCN Config - Subnet Private Network](images/VCN06.png)
 
-Na página inicial do serviço, no menu à esquerda, selecione a opção **Knowledge Bases**.
 
-![Knowledge Menu](images/knowledge-menu.png)
+Personalize a lista de segurança padrão da VCN para permitir o tráfego pelas portas do serviço de banco de dados MySQL clicando em **security list for private subnet-< nome da VCN >**.
 
-Selecione **Create Knowledge Base**, conforme indicado abaixo.
+![VCN Config - Security List](images/VCN07.png)
 
-![Create Knowledge](images/create-knowledge.png)
 
-Nesta tela, siga os passos abaixo:  
-1. Insira o nome da sua base de conhecimento. Recomendamos utilizar **kb-ai-agent**.  
-2. No campo **Data Source Type**, selecione a opção **Object Storage**.  
-3. Selecione a opção **Enable Hybrid Search**, que combina pesquisa semântica (busca baseada no significado e contexto) e pesquisa lexical (busca por correspondência exata de termos), garantindo resultados mais precisos e relevantes.
-4. Clique em **Specify Data Source** para configurar os arquivos que serão utilizados pelo Agent.  
+Em **Security rules**, clique em **Add Ingress Rules**.
 
-![Informations Knowledge](images/informations-knowledge.png)
+![VCN Config - Ingress Rules](images/VCN08.png)
 
-Na tela seguinte, vamos definir o **Data Source**. Siga os passos abaixo:
-1.  Insira o nome da sua fonte de dados. Recomendamos utilizar **kb-agent-ai**
-2.  Marque a opção **Enable Multi-Modal Parsing** para permitir a interpretação de gráficos, tabelas e outros elementos visuais dos documentos.
-3.  Em Select bucket, escolha o bucket previamente criado (neste exemplo, bucket-demo-ai-agent).
-4.  Marque a caixa **Select all in bucket**. 
-5.  Clique em **Create** para finalizar a criação da fonte de dados.
+Adicione a regra necessária à lista de segurança padrão para permitir o tráfego pela porta do serviço MySQL HeatWave e clique em **Add Ingress Rules**.
 
-![Data Source](images/data-source.png)
+Source CIDR:
 
-Na tela de criação da base de conhecimento, marque a opção **Automatically start ingestion job for above data sources**. Em seguida, clique em **Create**.
+    0.0.0.0/0
 
-![Creating Knowledge Base](images/creating-knowledge-base.png)
+Destination Port Range: 
 
-Verifique as mensagens no canto superior direito, indicando o sucesso na criação da base de conhecimento, da fonte de dados e do job de ingestão.
+    3306, 33060
 
-![Sucess Messages](images/sucess-messages.png)
+Description:
 
-O status da base de conhecimento aparecerá como **Creating** até que o processo seja concluído, cuja média de tempo é de **3-5 minutos**. Aguarde a finalização antes de prosseguir.
+    MySQL Ports
 
-## 3️⃣ Criação do Agente de IA
+![VCN Config - Add Ingress Rules](images/VCN09.png)
 
-No menu à esquerda, selecione a opção **Agents**. Em seguida, clique em **Create Agent**
 
-![Agents](images/agents.png)
+## 2️⃣ Criar banco de dados MySQL
 
-Nesta tela, siga os seguintes passos:
+No console, clique em **Menu de navegação > Databases > DB Systems**.
 
-1. Insira o nome do agente. Recomendamos o nome **agent-ai-demo**.
-2. No campo **Description** adicione uma descrição sobre o agente:
+![Menu DB Systems](images/MySQL01.png)
 
-> **Você responde dúvidas sobre direitos dos consumidores com base no Código de Defesa do Consumidor do Brasil, fornecendo respostas claras e fundamentadas na legislação. Sempre que possível, cite os artigos relevantes do CDC.**
 
-3. No campo **Welcome Message**, insira a mensagem de boas-vindas que será exibida para o usuário ao iniciar a interação com o agente. Exemplo: 
+Clique em **Create DB System**.
 
-> **Bem-vindo! Estou aqui para esclarecer suas dúvidas sobre o Código de Defesa do Consumidor. Como posso ajudar?**
+Como se trata de experimentação, escolha Desenvolvimento ou Teste .
 
-4. Clique em **Next**
+Verifique o compartimento; ele deve ser o mesmo compartimento em que você criou a VCN e atribua um nome ao sistema de banco de dados
 
-![Configuration Agents](images/configuration-agents.png)
+![Criação do DB Systems](images/MySQL02.png)
 
-Na proxima tela, iremos configurar a o RAG Tool, clique em **Add Tool** e siga os passos abaixo:
+Na seção **Create administrator credentials**, insira o nome de usuário e escolha uma senha, mas certifique-se de anotá-la, pois você a usará mais tarde
 
-![Add Tool](images/add-tool.png)
+Na **Setup** , selecione **Standalone** .
 
-1. Selecione a opção **RAG**.
-2. Insira o nome do RAG. Recomendamos o nome **rag-agent**.
-3. No campo **Description** insira uma descrição explicando de forma clara o que o RAG Tool pode recuperar permitindo que o agente de IA faça escolhas mais inteligentes sobre quando usá-la, garantindo respostas mais relevantes e precisas para o usuário.
+Em **Configure Netwrok**, certifique-se de selecionar a mesma VCN e a mesma subnet privada criada anteriormente.
 
->**Esta ferramenta pode recuperar informações detalhadas sobre os direitos e deveres dos consumidores conforme o Código de Defesa do Consumidor do Brasil, incluindo explicações sobre processos de reclamação, garantias, práticas comerciais, contratos, troca de produtos, reembolsos e orientações sobre como proceder em casos de descumprimento da legislação de defesa do consumidor. Ela oferece acesso a artigos específicos do CDC e interpretações confiáveis para apoiar o usuário em suas dúvidas referentes a relações de consumo no Brasil.**
+![Criação do DB Systems](images/MySQL03.png)
 
-4. No campo **Custom instructions** adicione instruções específicas para o agente. No exemplo, foi utilizado:
+Confirme se na seção **Configure hardware** a opção **Enable HeatWave cluster** está habilitada. 
 
->**Você responde dúvidas sobre direitos dos consumidores com base no Código de Defesa do Consumidor do Brasil, fornecendo respostas claras e fundamentadas na legislação. Sempre que possível, cite os artigos relevantes do CDC. Responda sempre de forma clara e exclusivamente em português brasileiro.**
+Altere o shape do MySQL para **MySQL.16**.
 
-5. Na seção **Add Knowledge Bases**, selecione a base de conhecimento que será vinculada ao agente. Certifique-se de que a base de conhecimento está ativa. **O Lifecycle State deve aparecer como Active.**
-6. Clique no botão **Add tool** para adicionar tool.
+![Criação do DB Systems](images/MySQL04.png)
 
-![RAG Tool Configuration](images/rag-tool-config.png)
-![Add KB Tool](images/add-kb-tool.png)
+Clique em **Configure HeatWave cluster** e, em seguida, clique em **Change Shape**.
 
-Na próxima seção, **Setup agent endpoint**, certifique-se de que a opção **Automatically create an endpoint for this agent** está marcada. Isso permitirá que o sistema crie automaticamente um endpoint para o agente, facilitando a interação com ele via API com outras aplicações.
+Selecione **HeatWave.512GB** e clique em **Select a shape**.
 
-![Endpoint Agent](images/setup-agent-endpoint.png)
+![Criação do DB Systems](images/MySQL05.png)
 
-Clique no botão **Next** e para finalizar a criação do agente clique em **Create agent**.
+Atualize os nós para **2**.
 
-![Create Agent](images/create-agent.png)
+![Criação do DB Systems](images/MySQL06.png)
 
-Nesta tela, aceite o Acordo de Licença e Política de Uso do Llama 3, o modelo de inteligência artificial utilizado pelo Agent.
+Na seção **Storage size** atualize o **Initial data storage size (GB)** para **1024**.
 
-![LLAMA3](images/llama3.png)
+![Criação do DB Systems](images/MySQL07.png)
 
-No canto superior direito, verifique as mensagens de confirmação. Elas devem indicar que a criação do agente  e do endpoint foram concluídas com sucesso.
+Na seção **Configure backup plan**, mantenha a janela de backup padrão de 7 dias. Desative a opção **Enable point-in-time recovery**.
 
-O campo **Lifecycle State** exibirá o status como **Creating**, com média de tempo  de **3-5 minutos** para finalização. Aguarde até que o status mude para **Active**, indicando que o agente está pronto para uso.
+![Criação do DB Systems](images/MySQL08.png)
 
-![Sucess Messages Agent](images/sucess-messages-agent.png)
+Deslize a tela para baixo e clique em **Show advanced option**.
 
-Clique no nome do agente e, em seguida, selecione a opção **Launch Chat** para iniciar a interação com o agente.
+![Criação do DB Systems](images/MySQL09.png)
 
-![Launch Chat](images/launch-chat.png)
+Acesse a aba **Connections** e insira o seguinte:
 
-> **ATENÇÃO: Caso o agente esteja ativo e o botão não esteja disponível, acesse o menu à esquerda inferior e selecione Endpoints. Verifique se o Lifecycle State do endpoint está como Active. Se o status estiver como Creating, aguarde a finalização e atualize a página.**
+Hostname: mysql-lakehouse
 
-## 4️⃣ Interface de Interação com o Assistente Virtual
+Database port: 3306
 
-### 🔵 **Agente e Endpoint (destacado em azul)**
+Database X protocol port: 33060
 
-> - **Agent:** Neste campo você seleciona o agente configurado para responder às suas perguntas. No exemplo, o agente selecionado é o **ai-agent**.
-> <br>
-> - **Agent Endpoint:** O endpoint associado ao agente. Este é o ponto de acesso que conecta o assistente às bases de conhecimento.
+Após concluir, clique em **Create**.
 
-### 🔴 **Área de Chat (destacada em vermelho)**
+![Criação do DB Systems](images/MySQL10.png)
 
-Esta é a área principal onde você pode interagir com o agente. Aqui, o assistente exibe a mensagem de saudação que configuramos e as respostas às suas perguntas.
+O sistema de banco de dados MySQL estará no estado **CREATING**.
 
-> -  O campo **Type a message...** é onde você insere suas perguntas. Após digitar, clique em **Submit** para enviar a mensagem.
-> -  O botão **Reset chat session** permite reiniciar a sessão de chat, apagando o histórico atual de interação.
-
-### 🟠 **Traces (destacado em laranja)**
-
-> O painel Traces mostra detalhes técnicos de cada interação com o agente, como as **consultas realizadas, os resultados gerados e os detalhes da página e parágrafo cujas informações foram obtidas**. Este recurso é útil para analisar como o assistente processa as perguntas e recupera informações da base de conhecimento.
-
-![Interface Agent](images/interface-agent.png)
-
-Na imagem abaixo, você pode observar o funcionamento do assistente virtual ao responder perguntas baseadas em diferentes documentos previamente carregados na base de conhecimento.
-
-![Chat Agent](images/chat-agent.png)
-
-Exemplos de perguntas para fazer os testes:
-
-    <copy>
-    Não gostei do produto. Posso cancelar a compra?
-    </copy>
-<!-- Separador -->
-
-    <copy>
-    Ao abrir uma conta bancária, fui informado de que era obrigatório contratar um seguro de vida. Gostaria de saber se essa exigência por parte do banco está correta.  
-    </copy>
-<!-- Separador -->
-
-    <copy>
-    O cinema da minha cidade proíbe a entrada de produtos adquiridos no supermercado, obrigando os clientes a comprarem apenas os itens vendidos no local. Essa prática está correta? 
-    </copy>
-<!-- Separador -->
-
-    <copy>
-    A escola da minha filha está solicitando diversos materiais. Gostaria de saber quais itens podem ser incluídos legalmente na lista de material escolar.
-    </copy>
-<!-- Separador -->
-
-Ao clicar em **View Citations**, você expande as referências utilizadas pelo assistente para gerar a resposta. 
-
-![View Citations](images/view-citations.png)
-
-Cada citação apresenta as seguintes informações:
-
-> - **Title:** O nome do arquivo de onde a informação foi extraída.
-> - **Object storage path:** O caminho do arquivo no armazenamento do OCI.
-> - **Document ID:** Um identificador único do documento.
-> - **Page numbers:** Indica o número da página no documento de onde a informação foi retirada.
-> - **Source text:** Exibe o trecho exato do documento utilizado para compor a resposta do assistente.
-
-
-🎉 Laboratório finalizado! Parabéns por concluir todas as etapas. Fique à vontade para criar novas perguntas, explorar a sua aplicação e descobrir ainda mais possibilidades com o seu assistente virtual.
-
-Você poderá seguir para o próximo laboratório.
+![Criação do DB Systems](images/MySQL11.png)
 
 ## 👥 Agradecimentos
 
-- **Autores** - Victória Rodrigues
-- **Autores Contribuintes** - Isabelle Anjos, Caio Oliveira, Gabriela Miyazima, Aristotelles Serra
-- **Última Atualização Por/Data** - Outubro 2025
+- **Autores** - Julio Rocha
+- **Última Atualização Por/Data** - Novembro 2025
 
 ## 🛡️ Declaração de Porto Seguro (Safe Harbor)
 
