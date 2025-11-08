@@ -2,7 +2,7 @@
 
 ## 📌 Introdução
 
-Este laboratório orienta você nas etapas para configurar a base de conhecimento para o AI Agent com Object Storage e mySQL HeatWave.
+Neste laboratório, você será guiado passo a passo no processo de configuração de uma base de conhecimento para Oracle Generative AI Agents, integrando fontes armazenadas no Object Storage e no banco de dados MySQL HeatWave. 
 
 <br>
 
@@ -13,7 +13,7 @@ Descubrar como utilizar de forma prática a funcionalidade de busca vetorial do 
 O que você aprenderá:
 
 - Criar buckets no Object Storage e realizar o upload de documentos.
-- Configurar e utilizar o serviço OCI Generative AI Agent para criar bases de conhecimento utilizando object storage.
+- Criar a Knowledge bases
 - Criar uma Rede Virtual na Nuvem e permita o tráfego pela porta do Serviço de Banco de Dados MySQL HeatWave.
 - Criar banco de dados MySQL HeatWave.
 
