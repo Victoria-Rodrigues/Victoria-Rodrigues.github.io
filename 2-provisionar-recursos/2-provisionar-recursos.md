@@ -27,10 +27,6 @@ Na guia do navegador com o OCI aberto, clique no menu de hambúrguer localizado 
 
 ![Buckets](images/buckets.png)
 
-Antes de criar o bucket, verifique se esta no **compartimento com seu nome**.
-
-![seleciona-compartimento](images/seleciona-compartiment.png)
-
 
 Clique em **Create Bucket**. Em seguida, insira um nome para o seu bucket. Recomendamos o nome **bucket-demo-ai-agent**. Finalize clicando em **Create**.
 
@@ -61,14 +57,9 @@ Clique no menu de hambúrguer localizado no canto superior esquerdo da tela. Em 
 
 ![Menu Agents](images/menu-agents.png)
 
-
 Na página inicial do serviço, no menu à esquerda, selecione a opção **Knowledge Bases**.
 
 ![Knowledge Menu](images/knowledge-menu.png)
-
-**Verifique se está no compartimento com seu nome.**
-
-![seleciona-compartiment-kb](seleciona-compartiment-kb.png)
 
 Selecione **Create Knowledge Base**, conforme indicado abaixo.
 
@@ -99,9 +90,70 @@ Verifique as mensagens no canto superior direito, indicando o sucesso na criaç�
 
 ![Sucess Messages](images/sucess-messages.png)
 
-O status da base de conhecimento aparecerá como **Creating** até que o processo seja concluído, cuja média de tempo é de **20-30 minutos**. Aguarde a finalização antes de prosseguir.
+O status da base de conhecimento aparecerá como **Creating** até que o processo seja concluído, cuja média de tempo é de **3-5 minutos**. Aguarde a finalização antes de prosseguir.
 
-## 3️⃣ Criar banco de dados MySQL
+## 3️⃣ Crie uma Rede Virtual na Nuvem e permita o tráfego pela porta do Serviço de Banco de Dados MySQL.  
+
+> **ATENÇÃO: Certifique-se de estar na região US Midwest (Chicago)**
+
+Faça login em seu tenant do OCI. No **menu de navegação**, selecione **Networking > Virtual cloud networks**.
+
+![Open VCN](images/VCN01.png)
+
+
+Selecione seu compartimento na lista e clique em **Start VCN Wizard**.
+> **Observação: Se você não selecionou um compartimento, pode selecionar o compartimento raiz, que foi criado por padrão quando você criou sua tenancy (ou seja, quando se registrou para a conta de avaliação). É possível criar tudo no compartimento raiz, mas a Oracle recomenda que você crie subcompartimentos para ajudar a gerenciar seus recursos com mais eficiência.**
+
+![VCN Wizard](images/VCN02.png)
+
+
+Selecione **Create VCN with Internet Connectivity** e clique em **Start VCN Wizard**.
+
+![VCN Wizard Internet](images/VCN03.png)
+
+
+No campo **VCN Name**, insira um nome para esta VCN e certifique-se de que o compartimento selecionado seja o correto. Mantenha as configurações padrão e clique em **Next**.
+
+![VCN Wizard - VCN Name](images/VCN04.png)
+
+
+Analise as informações e clique em **Create**.
+
+![VCN Wizard - Create](images/VCN05.png)
+
+
+Após a criação da VCN, em **Subnets**, clique em **private subnet-< nome da VCN >**.
+
+![VCN Config - Subnet Private Network](images/VCN06.png)
+
+
+Personalize a lista de segurança padrão da VCN para permitir o tráfego pelas portas do serviço de banco de dados MySQL clicando em **security list for private subnet-< nome da VCN >**.
+
+![VCN Config - Security List](images/VCN07.png)
+
+
+Em **Security rules**, clique em **Add Ingress Rules**.
+
+![VCN Config - Ingress Rules](images/VCN08.png)
+
+Adicione a regra necessária à lista de segurança padrão para permitir o tráfego pela porta do serviço MySQL HeatWave e clique em **Add Ingress Rules**.
+
+Source CIDR:
+
+    0.0.0.0/0
+
+Destination Port Range: 
+
+    3306,33060
+
+Description:
+
+    MySQL Ports
+
+![VCN Config - Add Ingress Rules](images/VCN09.png)
+
+
+## 4️⃣ Criar banco de dados MySQL
 
 No console, clique em **Menu de navegação > Databases > DB Systems**.
 
@@ -168,15 +220,10 @@ O sistema de banco de dados MySQL estará no estado **CREATING**.
 
 ![Criação do DB Systems](images/MySQL11.png)
 
-
-
-Você poderá seguir para o próximo laboratório.
-
 ## 👥 Agradecimentos
 
-- **Autores** - Victória Rodrigues
-- **Autores Contribuintes** - Isabelle Anjos, Caio Oliveira, Gabriela Miyazima, Aristotelles Serra
-- **Última Atualização Por/Data** - Outubro 2025
+- **Autores** - Victória Rodrigues, Julio Rocha
+- **Última Atualização Por/Data** - Novembro 2025
 
 ## 🛡️ Declaração de Porto Seguro (Safe Harbor)
 
