@@ -215,11 +215,27 @@ Deslize a tela para baixo e clique em **Show advanced option**.
 
 Acesse a aba **Connections** e insira o seguinte:
 
-Hostname: mysql-lakehouse
+Hostname: 
 
-Database port: 3306
+<copy>
+mysql-lakehouse
+    </copy>
+<!-- Separador -->
 
-Database X protocol port: 33060
+
+Database port: 
+
+<copy>
+3306
+    </copy>
+<!-- Separador -->
+
+Database X protocol port: 
+
+<copy>
+33060
+</copy>
+<!-- Separador -->
 
 Após concluir, clique em **Create**.
 
