@@ -12,9 +12,11 @@ Descubrar como utilizar de forma prática a funcionalidade de busca vetorial do 
 
 O que você aprenderá:
 
-- Criar buckets no Object Storage e realizar o upload de documentos.
-- Configurar e utilizar o serviço OCI Generative AI Agent para criar bases de conhecimento e agentes conversacionais.
-- Explorar como implementar a funcionalidade de Retrieval-Augmented Generation (RAG) para consultar documentos personalizados com eficiência e contexto.
+- Criar um Agent 
+- Configure as instruções para o Agent
+- Adicionar o RAG Tool no Agent
+- Crie um endpoint automaticamente
+- Interagir com o Agent criado
 
 <br>
 
@@ -86,7 +88,7 @@ Nesta tela, aceite o Acordo de Licença e Política de Uso do Llama 3, o modelo 
 
 No canto superior direito, verifique as mensagens de confirmação. Elas devem indicar que a criação do agente  e do endpoint foram concluídas com sucesso.
 
-O campo **Lifecycle State** exibirá o status como **Creating**, com média de tempo  de **3-5 minutos** para finalização. Aguarde até que o status mude para **Active**, indicando que o agente está pronto para uso.
+O campo **Lifecycle State** exibirá o status como **Creating**, com média de tempo  de **9 minutos** para finalização. Aguarde até que o status mude para **Active**, indicando que o agente está pronto para uso.
 
 ![Sucess Messages Agent](images/sucess-messages-agent.png)
 
