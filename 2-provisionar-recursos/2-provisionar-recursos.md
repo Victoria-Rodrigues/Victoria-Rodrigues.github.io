@@ -140,21 +140,21 @@ Adicione a regra necessária à lista de segurança padrão para permitir o trá
 
 Source CIDR:
 
-<copy>
+    <copy>
     0.0.0.0/0
     </copy>
 <!-- Separador -->
 
 Destination Port Range:
 
-<copy>
+    <copy>
     3306,33060
     </copy>
 <!-- Separador -->
 
 Description:
 
-<copy>
+    <copy>
     MySQL Ports
     </copy>
 <!-- Separador -->
@@ -217,24 +217,24 @@ Acesse a aba **Connections** e insira o seguinte:
 
 Hostname: 
 
-<copy>
-mysql-lakehouse
+    <copy>
+    mysql-lakehouse
     </copy>
 <!-- Separador -->
 
 
 Database port: 
 
-<copy>
-3306
+    <copy>
+    3306
     </copy>
 <!-- Separador -->
 
 Database X protocol port: 
 
-<copy>
-33060
-</copy>
+    <copy>
+    33060
+    </copy>
 <!-- Separador -->
 
 Após concluir, clique em **Create**.
