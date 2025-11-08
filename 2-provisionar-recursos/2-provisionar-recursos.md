@@ -2,7 +2,7 @@
 
 ## 📌 Introdução
 
-Este laboratório orienta você nas etapas para configurar um agente de IA generativa OCI, incluindo a ingestão de uma base de conhecimento no OCI Object Storage.
+Este laboratório orienta você nas etapas para configurar a base de conhecimento para o AI Agent com Object Storage e mySQL HeatWave.
 
 <br>
 
@@ -13,8 +13,9 @@ Descubrar como utilizar de forma prática a funcionalidade de busca vetorial do 
 O que você aprenderá:
 
 - Criar buckets no Object Storage e realizar o upload de documentos.
-- Configurar e utilizar o serviço OCI Generative AI Agent para criar bases de conhecimento e agentes conversacionais.
-- Explorar como implementar a funcionalidade de Retrieval-Augmented Generation (RAG) para consultar documentos personalizados com eficiência e contexto.
+- Configurar e utilizar o serviço OCI Generative AI Agent para criar bases de conhecimento utilizando object storage.
+- Criar uma Rede Virtual na Nuvem e permita o tráfego pela porta do Serviço de Banco de Dados MySQL HeatWave.
+- Criar banco de dados MySQL HeatWave.
 
 <br>
 
@@ -162,7 +163,7 @@ Description:
 ![VCN Config - Add Ingress Rules](images/VCN09.png)
 
 
-## 4️⃣ Criar banco de dados MySQL
+## 4️⃣ Criar banco de dados MySQL HeatWave
 
 No console, clique em **Menu de navegação > Databases > DB Systems**.
 
