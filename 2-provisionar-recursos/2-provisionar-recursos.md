@@ -140,15 +140,24 @@ Adicione a regra necessária à lista de segurança padrão para permitir o trá
 
 Source CIDR:
 
+<copy>
     0.0.0.0/0
+    </copy>
+<!-- Separador -->
 
-Destination Port Range: 
+Destination Port Range:
 
+<copy>
     3306,33060
+    </copy>
+<!-- Separador -->
 
 Description:
 
+<copy>
     MySQL Ports
+    </copy>
+<!-- Separador -->
 
 ![VCN Config - Add Ingress Rules](images/VCN09.png)
 
