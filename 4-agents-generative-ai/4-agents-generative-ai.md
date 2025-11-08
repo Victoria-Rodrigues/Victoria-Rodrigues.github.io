@@ -1,22 +1,20 @@
-# Oracle Generative AI Agents
+# Criação e configuração do AI Agent
 
 ## 📌 Introdução
 
-Este laboratório orienta você nas etapas para configurar um agente de IA generativa OCI, incluindo a ingestão de uma base de conhecimento no OCI Object Storage.
+A busca vetorial tem se destacado como uma tecnologia inovadora para otimizar a recuperação de informações em grandes volumes de documentos, permitindo consultas mais precisas e relevantes. No Oracle Generative AI Agents, essa funcionalidade pode ser aplicada de forma simples e prática para transformar a maneira como os usuários acessam e exploram dados. Neste guia, você aprenderá, passo a passo, como criar um Agent, configurar suas instruções, adicionar a ferramenta RAG (Retrieval-Augmented Generation) ao Agent, criar um endpoint automaticamente e interagir com o Agent criado. Ao final, você entenderá como utilizar a busca vetorial para potencializar consultas inteligentes em seus documentos, promovendo resultados mais eficientes e assertivos.
 
 <br>
 
 ### 📌 **Objetivos**
+Aprenda a utilizar, na prática, a funcionalidade de busca vetorial do Oracle Generative AI Agents para potencializar a eficiência e a precisão das consultas em documentos empresariais.
 
-Descubrar como utilizar de forma prática a funcionalidade de busca vetorial do Oracle Generative AI Agents para otimizar consultas em documentos.
-
-O que você aprenderá:
-
-- Criar um Agent 
-- Configure as instruções para o Agent
-- Adicionar o RAG Tool no Agent
-- Crie um endpoint automaticamente
-- Interagir com o Agent criado
+Neste laboratório, você irá:
+- Criar um Agent do Oracle Generative AI;
+- Configurar as instruções e parâmetros do Agent conforme sua necessidade;
+- Integrar a ferramenta RAG (Retrieval-Augmented Generation) ao Agent para enriquecimento das respostas;
+- Criar automaticamente um endpoint para expor o Agent;
+- Realizar consultas e interagir com o Agent criado, avaliando os resultados da busca vetorial.
 
 <br>
 
@@ -32,16 +30,16 @@ Nesta tela, siga os seguintes passos:
 1. Insira o nome do agente. Recomendamos o nome **agent-ai-demo**.
 2. No campo **Description** adicione uma descrição sobre o agente:
 
-    <copy>
-    Você responde dúvidas sobre direitos dos consumidores com base no Código de Defesa do Consumidor do Brasil, fornecendo respostas claras e fundamentadas na legislação. Sempre que possível, cite os artigos relevantes do CDC.
-    </copy>
+        <copy>
+        Você responde dúvidas sobre direitos dos consumidores com base no Código de Defesa do Consumidor do Brasil, fornecendo respostas claras e fundamentadas na legislação. Sempre que possível, cite os artigos relevantes do CDC.
+        </copy>
 <!-- Separador -->
 
 3. No campo **Welcome Message**, insira a mensagem de boas-vindas que será exibida para o usuário ao iniciar a interação com o agente. Exemplo: 
 
-    <copy>
-    Bem-vindo! Estou aqui para esclarecer suas dúvidas sobre o Código de Defesa do Consumidor. Como posso ajudar?
-    </copy>
+        <copy>
+        Bem-vindo! Estou aqui para esclarecer suas dúvidas sobre o Código de Defesa do Consumidor. Como posso ajudar?
+        </copy>
 <!-- Separador -->
 
 4. Clique em **Next**
