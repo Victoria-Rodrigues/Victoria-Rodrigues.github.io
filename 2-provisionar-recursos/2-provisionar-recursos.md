@@ -90,7 +90,7 @@ Verifique as mensagens no canto superior direito, indicando o sucesso na criaç�
 
 ![Sucess Messages](images/sucess-messages.png)
 
-O status da base de conhecimento aparecerá como **Creating** até que o processo seja concluído, cuja média de tempo é de **3-5 minutos**. Aguarde a finalização antes de prosseguir.
+O status da base de conhecimento aparecerá como **Creating** até que o processo seja concluído, cuja média de tempo é de **20-30 minutos**. 
 
 ## 3️⃣ Crie uma Rede Virtual na Nuvem e permita o tráfego pela porta do Serviço de Banco de Dados MySQL.  
 
