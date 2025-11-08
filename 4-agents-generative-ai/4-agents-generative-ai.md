@@ -143,6 +143,13 @@ Exemplos de perguntas para fazer os testes:
     </copy>
 <!-- Separador -->
 
+    <copy>
+    Qual é o período permitido para desistir de compras ou serviços contratados pela internet ou telefone?
+    </copy>
+<!-- Separador -->
+
+
+
 Ao clicar em **View Citations**, você expande as referências utilizadas pelo assistente para gerar a resposta. 
 
 ![View Citations](images/view-citations.png)
