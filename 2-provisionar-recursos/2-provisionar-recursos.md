@@ -198,11 +198,11 @@ Selecione **HeatWave.512GB** e clique em **Select a shape**.
 
 ![Criação do DB Systems](images/MySQL05.png)
 
-Atualize os nós para **2**.
+Confirme se a quantidade de nós está **1**, caso contrário ajuste o valor.
 
 ![Criação do DB Systems](images/MySQL06.png)
 
-Na seção **Storage size** atualize o **Initial data storage size (GB)** para **1024**.
+Na seção **Storage size** atualize o **Initial data storage size (GB)** para **100**.
 
 ![Criação do DB Systems](images/MySQL07.png)
 
@@ -213,6 +213,11 @@ Na seção **Configure backup plan**, mantenha a janela de backup padrão de 7 d
 Deslize a tela para baixo e clique em **Show advanced option**.
 
 ![Criação do DB Systems](images/MySQL09.png)
+
+Acesse a aba **Configuration** e altere a **Database version** para **9.5.0**:
+
+![Criação do DB Systems](images/MySQL12.png)
+
 
 Acesse a aba **Connections** e insira o seguinte:
 
@@ -245,6 +250,13 @@ Após concluir, clique em **Create**.
 O sistema de banco de dados MySQL estará no estado **CREATING**.
 
 ![Criação do DB Systems](images/MySQL11.png)
+
+
+## 5️⃣ Criar JumpServer para acessar o banco de dados MySQL
+
+No console, clique em **Menu de navegação > Databases > DB Systems**.
+
+![Menu DB Systems](images/MySQL01.png)
 
 ## 👥 Agradecimentos
 
