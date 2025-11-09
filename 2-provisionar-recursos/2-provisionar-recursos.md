@@ -319,6 +319,49 @@ Para acessar a instancia é necessário configurar um client ssh com este IP e u
 ![Create Instance](images/Instance13.png)
 
 
+## 6️⃣ Configurar o JumpServer e acessar o banco de dados MySQL
+
+Utilizando um cliente ssh, conecte-se à instancia criada utilizando o usuário **opc** e a chave privada baixada.
+
+Baixe o pacote do MySQL Shell para se conectar ao banco, ele pode ser encontrado no site https://dev.mysql.com/downloads/shell/
+
+Para baixar diretamente na instancia, utilize o seguinte comando:
+
+    <copy>
+    wget https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-9.5.0-1.el9.x86_64.rpm
+    </copy>
+<!-- Separador -->
+
+Uma vez baixado o arquivo rpm, faça a instalação dele utilizando o comando a seguir:
+
+    <copy>
+    sudo yum install mysql-shell-9.5.0-1.el9.x86_64.rpm
+    </copy>
+<!-- Separador -->
+
+Confirme com **y** no momento solicitado e a instalação será realizada automaticamente
+
+![Config Instance](images/ConfigInstance01.png)
+
+Teste a conexão com o banco utilizando o MySQL Shell com o seguinte comando:
+
+    <copy>
+    mysqlsh -u <usuário administrador> -h <Private IPv4 Address do MySQL> -P 3306 -p
+    </copy>
+<!-- Separador -->
+
+Insira a senha e pressione <enter>
+
+Ao conectar no banco, caso o modo não esteja como **SQL** digite o seguinte comando para trocar de modo, caso contrário o terminal já está pronto para os comandos SQL:
+
+    <copy>
+    /sql
+    </copy>
+<!-- Separador -->
+
+![Config Instance](images/ConfigInstance02.png)
+
+
 ## 👥 Agradecimentos
 
 - **Autores** - Victória Rodrigues, Julio Rocha
