@@ -2,7 +2,7 @@
 
 ## 📌 Introdução
 
-EsNeste laboratório, você preparará a infraestrutura necessária para executar o restante do workshop. Criaremos/configuraremos os seguintes elementos: uma Rede Virtual em Nuvem, o Banco de Dados MySQL e o Cluster HeatWave.
+Neste laboratório, você será guiado passo a passo no processo de configuração de uma base de conhecimento para Oracle Generative AI Agents, integrando fontes armazenadas no Object Storage e no banco de dados MySQL HeatWave.
 
 <br>
 
@@ -10,79 +10,21 @@ EsNeste laboratório, você preparará a infraestrutura necessária para executa
 
 Descubra como realizar de forma prática a criação, configuração e utilização do MySQL Heatwave e suas funcionalidades de Generative AI.
 
-O que você aprenderá:
-
-- Crie uma VCN (Virtual Cloud Network) que ajude você a definir sua própria topologia de rede de data center dentro da Oracle Cloud.
-- Crie o próprio banco de dados MySQL.
-- Ative o cluster analítico do Heatwave.
-
 Pré-requisitos:
 
 - Conta de avaliação gratuita da Oracle.
+- Uma instância funcional do MySQL HeatWave com o Lakehouse habilitado.
+- Uma conexão OCI Database Tools configurada para acessar sua instância do HeatWave (veja no passo 5️⃣)
+- Um agente de IA criado e configurado, caso este passo ainda não tenha sido realizado, volte à **Etapa 2: Criação e configuração do AI Agent**
 
 <br>
 
 
-## 1️⃣ Crie uma Rede Virtual na Nuvem e permita o tráfego pela porta do Serviço de Banco de Dados MySQL.  
+## 1️⃣ Criação de uma base de conhecimento HeatWave para o Agente de IA
 
-> **ATENÇÃO: Certifique-se de estar na região US Midwest (Chicago)**
+Uma base de conhecimento HeatWave utiliza a capacidade de busca vetorial da sua instância MySQL HeatWave. Primeiro, você precisa criar um procedimento armazenado de busca contextual na sua instância MySQL HeatWave, que será chamado pelo Agente de IA ao recuperar o contexto. Em seguida, você pode criar uma base de conhecimento e configurá-la para se conectar à sua instância MySQL HeatWave e usar o procedimento de busca contextual.
 
-Faça login em seu tenant do OCI. No **menu de navegação**, selecione **Networking > Virtual cloud networks**.
-
-![Open VCN](images/VCN01.png)
-
-
-Selecione seu compartimento na lista e clique em **Start VCN Wizard**.
-> **Observação: Se você não selecionou um compartimento, pode selecionar o compartimento raiz, que foi criado por padrão quando você criou sua tenancy (ou seja, quando se registrou para a conta de avaliação). É possível criar tudo no compartimento raiz, mas a Oracle recomenda que você crie subcompartimentos para ajudar a gerenciar seus recursos com mais eficiência.**
-
-![VCN Wizard](images/VCN02.png)
-
-
-Selecione **Create VCN with Internet Connectivity** e clique em **Start VCN Wizard**.
-
-![VCN Wizard Internet](images/VCN03.png)
-
-
-No campo **VCN Name**, insira um nome para esta VCN e certifique-se de que o compartimento selecionado seja o correto. Mantenha as configurações padrão e clique em **Next**.
-
-![VCN Wizard - VCN Name](images/VCN04.png)
-
-
-Analise as informações e clique em **Create**.
-
-![VCN Wizard - Create](images/VCN05.png)
-
-
-Após a criação da VCN, em **Subnets**, clique em **private subnet-< nome da VCN >**.
-
-![VCN Config - Subnet Private Network](images/VCN06.png)
-
-
-Personalize a lista de segurança padrão da VCN para permitir o tráfego pelas portas do serviço de banco de dados MySQL clicando em **security list for private subnet-< nome da VCN >**.
-
-![VCN Config - Security List](images/VCN07.png)
-
-
-Em **Security rules**, clique em **Add Ingress Rules**.
-
-![VCN Config - Ingress Rules](images/VCN08.png)
-
-Adicione a regra necessária à lista de segurança padrão para permitir o tráfego pela porta do serviço MySQL HeatWave e clique em **Add Ingress Rules**.
-
-Source CIDR:
-
-    0.0.0.0/0
-
-Destination Port Range: 
-
-    3306,33060
-
-Description:
-
-    MySQL Ports
-
-![VCN Config - Add Ingress Rules](images/VCN09.png)
-
+## ## 1️⃣.1️⃣ Criação do procedimento de busca contextual
 
 ## 2️⃣ Criar banco de dados MySQL
 

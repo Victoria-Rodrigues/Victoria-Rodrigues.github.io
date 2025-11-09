@@ -16,6 +16,7 @@ O que você aprenderá:
 - Criar a Knowledge bases utilizando object storage
 - Criar uma Rede Virtual na Nuvem e permita o tráfego pela porta do Serviço de Banco de Dados MySQL HeatWave.
 - Criar banco de dados MySQL HeatWave.
+- Criar e configurar um JumpServer para acessar o banco de dados MySQL Heatwave
 
 <br>
 
