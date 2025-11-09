@@ -224,6 +224,17 @@ Dentro de **Add knowledge bases** selecione a base de conhecimento para o MySQL 
 
 ![Tools](images/Tool02.png)
 
+## 7️⃣ Utilização do Chat com as informações do arquivo vetorizado
+
+Acesse o agente criado e clique em **Launch Chat**
+
+![Chat](images/Chat01.png)
+
+Certifique-se que o **Agent** selecionado está correto e faça algumas perguntas para o agente e veja respostas condizentes com o que está no arquivo carregado.
+
+![Chat](images/Chat02.png)
+
+
 ## 👥 Agradecimentos
 
 - **Autores** - Julio Rocha
