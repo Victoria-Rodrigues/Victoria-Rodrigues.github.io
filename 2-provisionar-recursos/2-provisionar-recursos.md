@@ -254,9 +254,70 @@ O sistema de banco de dados MySQL estará no estado **CREATING**.
 
 ## 5️⃣ Criar JumpServer para acessar o banco de dados MySQL
 
-No console, clique em **Menu de navegação > Databases > DB Systems**.
+No console, clique em **Menu de navegação > Compute > Instances**.
 
-![Menu DB Systems](images/MySQL01.png)
+![Create Instance](images/Instance01.png)
+
+Clique em **Create Instance**
+
+![Create Instance](images/Instance02.png)
+
+Escolha um nome para identificar a instancia e adicione no campo **Name**
+
+![Create Instance](images/Instance03.png)
+
+Na seção **Shape** clique em **Change shape** para alterar o tipo de instancia que será criada
+
+![Create Instance](images/Instance04.png)
+
+Na tela de seleção de shapes, certifique-se de que a opção **Virtual machine** está selecionada.
+
+Em **Shape series** escolha **AMD**
+
+Na seção **Image** selecione **VM.Standard.E4.Flex** e certifique-se de que na coluna **OCPU** está com o valor **1** e na coluna **Memory (GB)** o valor está como **16**.
+
+Clique em **Select shape**
+
+![Create Instance](images/Instance05.png)
+
+Após selecionar o shape correto, clique em **Next**
+
+![Create Instance](images/Instance06.png)
+
+Na tela de **Security** não é necessário realizar alterações, clique em **Next**
+
+![Create Instance](images/Instance07.png)
+
+Na seção **Networking** certifique-se que a **Virtual cloud network** selecionada é a mesma criada anteriormente e que a **Subnet** selecionada é a publica.
+
+![Create Instance](images/Instance08.png)
+
+Ainda na seção **Networking**, mais abaixo, dentro de **Add SSH Key** certifique-se de que a opção **Generate a key pair for me** está selecionada e clique e **Download private key** e em **Download public key** para fazer o download do par de chaves da instancia.
+
+> **Observação: por motivos de segurança, as instancias criadas na OCI não são acessada por usuário e senha, somente com chaves de acesso.**
+
+Após realizar o download das chaves, clique em **Next**
+
+![Create Instance](images/Instance09.png)
+
+Na seção **Boot volume** não é necessário realizar nenhuma alteração, somente clique em **Next**
+
+![Create Instance](images/Instance10.png)
+
+Revise as opções escolhidas anteriormente na seção **Review** e clique em **Create**
+
+![Create Instance](images/Instance11.png)
+
+A instancia ficará em status de **Provisioning** até que termine o processo de criação
+
+![Create Instance](images/Instance12.png)
+
+Ao terminar a instanciação, o status mudará para **Running**, neste momento será possível acessar a instancia diretamente utilizando o **Public IPv4 address** que está na aba **Networking**.
+
+Para acessar a instancia é necessário configurar um client ssh com este IP e utilizar o usuário **opc** e as chaves baixadas anteriormente durante a criação.
+
+![Create Instance](images/Instance13.png)
+
 
 ## 👥 Agradecimentos
 
