@@ -168,75 +168,61 @@ Selecione os arquivos baixados no seu computador, **clique e arraste para a regi
 
 ![Bucket PDF](images/bucket-pdf.png)
 
+Na aba **Management**, clique em **Create pre-authenticated request**
+
+![Bucket Config](images/Bucket02.png)
+
+Verifique que está preenchido o campo **Name** (altere caso prefira), confirmen que **Pre-authenticated request target** esteja como **Bucket**, **Access type** como **Permit object reads and writes** e **Enable object listing** está selecionado, então clique em **Create pre-authenticated request**.
+
+![Bucket Config](images/Bucket03.png)
+
+AO clicar em **Create** uma tela aparecerá com a **Pre-authenticated request URL**, copie e guarde em um arquivo pois essa URL não aparecerá mais em nenhum lugar e será necessária no próximo passo.
+
+![Bucket Config](images/Bucket04.png)
 
 
+## 5️⃣ Vetorização do arquivo do Bucket
 
-## 2️⃣ Criar banco de dados MySQL
+Para fazer a vetorização do documento carrega do no bucket, conecte-se no banco via ssh com o seguinte comando
 
-No console, clique em **Menu de navegação > Databases > DB Systems**.
+    <copy>
+    mysqlsh -u <usuário administrador> -h <Private IPv4 Address do MySQL> -P 3306 -p
+    </copy>
+<!-- Separador -->
 
-![Menu DB Systems](images/MySQL01.png)
+Execute o seguinte comando para gerar a vector store com os vetores do arquivo (altere o valore de **PAR_URL** para o valore coletado no passo anterior):
+
+    <copy>
+    CREATE DATABASE IF NOT EXISTS my_vector_store;
+
+    USE my_vector_store;
+
+    CALL sys.vector_store_load('<PAR_URL>', NULL);
+    </copy>
+<!-- Separador -->
+
+Quando executada essa procedure, um select aparecerá no terminal, copie ele e execute.
+
+![Vector](images/Vector01.png)
+
+Este select irá mostrar o status da vetorização do(s) documento(s) presentes nesse bucket
+
+Execute este select até que esteja com status de 100% completado.
+
+![Vector](images/Vector02.png)
 
 
-Clique em **Create DB System**.
+## 6️⃣ Criação da Tool no Agente de IA
 
-Como se trata de experimentação, escolha Desenvolvimento ou Teste .
+Dentro do Agent criado anteriormente, na lista de **Resouces** à esquerda, selecione **Tools** e clique em **Create Tool**
 
-Verifique o compartimento; ele deve ser o mesmo compartimento em que você criou a VCN e atribua um nome ao sistema de banco de dados
+![Tools](images/Tool01.png)
 
-![Criação do DB Systems](images/MySQL02.png)
+Selecione a opção **RAG**, defina um nome para a Tool em **Name** e adicione uma **Description**.
 
-Na seção **Create administrator credentials**, insira o nome de usuário e escolha uma senha, mas certifique-se de anotá-la, pois você a usará mais tarde
+Dentro de **Add knowledge bases** selecione a base de conhecimento para o MySQL HeatWave criada anteriormente e clique em **Create tool**
 
-Na **Setup** , selecione **Standalone** .
-
-Em **Configure Netwrok**, certifique-se de selecionar a mesma VCN e a mesma subnet privada criada anteriormente.
-
-![Criação do DB Systems](images/MySQL03.png)
-
-Confirme se na seção **Configure hardware** a opção **Enable HeatWave cluster** está habilitada. 
-
-Altere o shape do MySQL para **MySQL.16**.
-
-![Criação do DB Systems](images/MySQL04.png)
-
-Clique em **Configure HeatWave cluster** e, em seguida, clique em **Change Shape**.
-
-Selecione **HeatWave.512GB** e clique em **Select a shape**.
-
-![Criação do DB Systems](images/MySQL05.png)
-
-Atualize os nós para **2**.
-
-![Criação do DB Systems](images/MySQL06.png)
-
-Na seção **Storage size** atualize o **Initial data storage size (GB)** para **1024**.
-
-![Criação do DB Systems](images/MySQL07.png)
-
-Na seção **Configure backup plan**, mantenha a janela de backup padrão de 7 dias. Desative a opção **Enable point-in-time recovery**.
-
-![Criação do DB Systems](images/MySQL08.png)
-
-Deslize a tela para baixo e clique em **Show advanced option**.
-
-![Criação do DB Systems](images/MySQL09.png)
-
-Acesse a aba **Connections** e insira o seguinte:
-
-Hostname: mysql-lakehouse
-
-Database port: 3306
-
-Database X protocol port: 33060
-
-Após concluir, clique em **Create**.
-
-![Criação do DB Systems](images/MySQL10.png)
-
-O sistema de banco de dados MySQL estará no estado **CREATING**.
-
-![Criação do DB Systems](images/MySQL11.png)
+![Tools](images/Tool02.png)
 
 ## 👥 Agradecimentos
 
