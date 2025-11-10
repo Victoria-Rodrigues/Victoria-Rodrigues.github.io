@@ -230,6 +230,33 @@ Certifique-se que o **Agent** selecionado está correto e faça algumas pergunta
 
 ![Chat](images/Chat02.png)
 
+Exemplos de perguntas para fazer os testes:
+
+    <copy>
+    O que é sociedade de consumo?
+    </copy>
+<!-- Separador -->
+
+    <copy>
+    Quais são os direitos do consumidor?  
+    </copy>
+<!-- Separador -->
+
+    <copy>
+    O que é contrato? 
+    </copy>
+<!-- Separador -->
+
+    <copy>
+    O que devemos considerar no comercio de alimentos?
+    </copy>
+<!-- Separador -->
+
+    <copy>
+    Quais assuntos abordados na Cartilh de "Educação para o Consumo Consciente"?
+    </copy>
+<!-- Separador -->
+
 
 ## 👥 Agradecimentos
 
