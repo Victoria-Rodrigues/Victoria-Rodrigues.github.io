@@ -92,12 +92,12 @@ Descrição:
 Copie e cole as politicas na área em branco:
 
     <copy>
-    allow any-user  to manage buckets in tenancy
+    allow any-user to manage buckets in tenancy
     allow any-user to manage objects in tenancy
     allow any-user to manage database-tools-family in tenancy
     allow any-user to manage virtual-network-family in tenancy
     allow any-user to manage mysql-family in tenancy
-    allow any-user to  manage vaults in tenancy
+    allow any-user to manage vaults in tenancy
     allow any-user to manage keys in tenancy
     allow any-user to manage object-family in tenancy
     allow any-user to manage genai-agent-family in tenancy
