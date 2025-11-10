@@ -11,6 +11,10 @@
       "filename": "1-config/0-pt-config-lab.md"
     },
     {
+      "title": "Configuração das Permissões",
+      "filename": "3-policies/3-agent-policies.md"
+    },
+    {
       "title": "Etapa 1: Provisionar Base de conhecimento e MySQL HeatWave",
       "filename": "2-provisionar-recursos/2-provisionar-recursos.md"
     },
