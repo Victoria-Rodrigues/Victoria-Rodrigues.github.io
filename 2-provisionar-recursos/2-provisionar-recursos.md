@@ -16,6 +16,7 @@ O que você aprenderá:
 - Criar a Knowledge bases utilizando object storage
 - Criar uma Rede Virtual na Nuvem e permita o tráfego pela porta do Serviço de Banco de Dados MySQL HeatWave.
 - Criar banco de dados MySQL HeatWave.
+- Criar e configurar um JumpServer para acessar o banco de dados MySQL Heatwave
 
 <br>
 
@@ -198,11 +199,11 @@ Selecione **HeatWave.512GB** e clique em **Select a shape**.
 
 ![Criação do DB Systems](images/MySQL05.png)
 
-Atualize os nós para **2**.
+Confirme se a quantidade de nós está **1**, caso contrário ajuste o valor.
 
 ![Criação do DB Systems](images/MySQL06.png)
 
-Na seção **Storage size** atualize o **Initial data storage size (GB)** para **1024**.
+Na seção **Storage size** atualize o **Initial data storage size (GB)** para **100**.
 
 ![Criação do DB Systems](images/MySQL07.png)
 
@@ -213,6 +214,11 @@ Na seção **Configure backup plan**, mantenha a janela de backup padrão de 7 d
 Deslize a tela para baixo e clique em **Show advanced option**.
 
 ![Criação do DB Systems](images/MySQL09.png)
+
+Acesse a aba **Configuration** e altere a **Database version** para **9.5.0**:
+
+![Criação do DB Systems](images/MySQL12.png)
+
 
 Acesse a aba **Connections** e insira o seguinte:
 
@@ -245,6 +251,117 @@ Após concluir, clique em **Create**.
 O sistema de banco de dados MySQL estará no estado **CREATING**.
 
 ![Criação do DB Systems](images/MySQL11.png)
+
+
+## 5️⃣ Criar JumpServer para acessar o banco de dados MySQL
+
+No console, clique em **Menu de navegação > Compute > Instances**.
+
+![Create Instance](images/Instance01.png)
+
+Clique em **Create Instance**
+
+![Create Instance](images/Instance02.png)
+
+Escolha um nome para identificar a instancia e adicione no campo **Name**
+
+![Create Instance](images/Instance03.png)
+
+Na seção **Shape** clique em **Change shape** para alterar o tipo de instancia que será criada
+
+![Create Instance](images/Instance04.png)
+
+Na tela de seleção de shapes, certifique-se de que a opção **Virtual machine** está selecionada.
+
+Em **Shape series** escolha **AMD**
+
+Na seção **Image** selecione **VM.Standard.E4.Flex** e certifique-se de que na coluna **OCPU** está com o valor **1** e na coluna **Memory (GB)** o valor está como **16**.
+
+Clique em **Select shape**
+
+![Create Instance](images/Instance05.png)
+
+Após selecionar o shape correto, clique em **Next**
+
+![Create Instance](images/Instance06.png)
+
+Na tela de **Security** não é necessário realizar alterações, clique em **Next**
+
+![Create Instance](images/Instance07.png)
+
+Na seção **Networking** certifique-se que a **Virtual cloud network** selecionada é a mesma criada anteriormente e que a **Subnet** selecionada é a publica.
+
+![Create Instance](images/Instance08.png)
+
+Ainda na seção **Networking**, mais abaixo, dentro de **Add SSH Key** certifique-se de que a opção **Generate a key pair for me** está selecionada e clique e **Download private key** e em **Download public key** para fazer o download do par de chaves da instancia.
+
+> **Observação: por motivos de segurança, as instancias criadas na OCI não são acessada por usuário e senha, somente com chaves de acesso.**
+
+Após realizar o download das chaves, clique em **Next**
+
+![Create Instance](images/Instance09.png)
+
+Na seção **Boot volume** não é necessário realizar nenhuma alteração, somente clique em **Next**
+
+![Create Instance](images/Instance10.png)
+
+Revise as opções escolhidas anteriormente na seção **Review** e clique em **Create**
+
+![Create Instance](images/Instance11.png)
+
+A instancia ficará em status de **Provisioning** até que termine o processo de criação
+
+![Create Instance](images/Instance12.png)
+
+Ao terminar a instanciação, o status mudará para **Running**, neste momento será possível acessar a instancia diretamente utilizando o **Public IPv4 address** que está na aba **Networking**.
+
+Para acessar a instancia é necessário configurar um client ssh com este IP e utilizar o usuário **opc** e as chaves baixadas anteriormente durante a criação.
+
+![Create Instance](images/Instance13.png)
+
+
+## 6️⃣ Configurar o JumpServer e acessar o banco de dados MySQL
+
+Utilizando um cliente ssh, conecte-se à instancia criada utilizando o usuário **opc** e a chave privada baixada.
+
+Baixe o pacote do MySQL Shell para se conectar ao banco, ele pode ser encontrado no site https://dev.mysql.com/downloads/shell/
+
+Para baixar diretamente na instancia, utilize o seguinte comando:
+
+    <copy>
+    wget https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-9.5.0-1.el9.x86_64.rpm
+    </copy>
+<!-- Separador -->
+
+Uma vez baixado o arquivo rpm, faça a instalação dele utilizando o comando a seguir:
+
+    <copy>
+    sudo yum install mysql-shell-9.5.0-1.el9.x86_64.rpm
+    </copy>
+<!-- Separador -->
+
+Confirme com **y** no momento solicitado e a instalação será realizada automaticamente
+
+![Config Instance](images/ConfigInstance01.png)
+
+Teste a conexão com o banco utilizando o MySQL Shell com o seguinte comando:
+
+    <copy>
+    mysqlsh -u <usuário administrador> -h <Private IPv4 Address do MySQL> -P 3306 -p
+    </copy>
+<!-- Separador -->
+
+Insira a senha e pressione <enter>
+
+Ao conectar no banco, caso o modo não esteja como **SQL** digite o seguinte comando para trocar de modo, caso contrário o terminal já está pronto para os comandos SQL:
+
+    <copy>
+    /sql
+    </copy>
+<!-- Separador -->
+
+![Config Instance](images/ConfigInstance02.png)
+
 
 ## 👥 Agradecimentos
 
