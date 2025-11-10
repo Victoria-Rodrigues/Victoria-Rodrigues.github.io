@@ -44,7 +44,7 @@ Dentro do Vault criado vá para a aba **Secrets** e clique em **Create Secret**
 
 ![Vault](images/Vault06.png)
 
-Preencha o campo **Name**, selecione a **Key** criada anteriormente em **Emcryption Key**, troque para **Manual secret generation**, preencha o campo **Secret contents** com a senha definida para o usuário administrador na criação no banco e clique em **Create**.
+Preencha o campo **Name**, selecione a **Key** criada anteriormente em **Encryption Key**, troque para **Manual secret generation**, preencha o campo **Secret contents** com a senha definida para o usuário administrador na criação no banco e clique em **Create**.
 
 ![Vault](images/Vault07.png)
 
@@ -168,17 +168,13 @@ Selecione os arquivos baixados no seu computador, **clique e arraste para a regi
 
 ![Bucket PDF](images/bucket-pdf.png)
 
-Na aba **Management**, clique em **Create pre-authenticated request**
+Guarde o nome do **bucket** e seu **namespace**, pois serão necessários no passo seguinte
 
-![Bucket Config](images/Bucket02.png)
+![Bucket Config](images/Bucket01.png)
 
-Verifique que está preenchido o campo **Name** (altere caso prefira), confirmen que **Pre-authenticated request target** esteja como **Bucket**, **Access type** como **Permit object reads and writes** e **Enable object listing** está selecionado, então clique em **Create pre-authenticated request**.
+Na aba **Objects** guarde também o nome do arquivo, pois será necessário no próximo passo
 
-![Bucket Config](images/Bucket03.png)
-
-AO clicar em **Create** uma tela aparecerá com a **Pre-authenticated request URL**, copie e guarde em um arquivo pois essa URL não aparecerá mais em nenhum lugar e será necessária no próximo passo.
-
-![Bucket Config](images/Bucket04.png)
+![Bucket Object Config](images/Bucket05.png)
 
 
 ## 5️⃣ Vetorização do arquivo do Bucket
@@ -197,7 +193,7 @@ Execute o seguinte comando para gerar a vector store com os vetores do arquivo (
 
     USE my_vector_store;
 
-    CALL sys.vector_store_load('<PAR_URL>', NULL);
+    CALL sys.vector_store_load('oci://<nome do bucket>@<namespace>/<nome do arquivo>', NULL);
     </copy>
 <!-- Separador -->
 
