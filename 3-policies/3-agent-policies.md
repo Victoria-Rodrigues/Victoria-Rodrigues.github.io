@@ -2,16 +2,16 @@
 
 ## 📌 Introdução
 
-Neste laboratório, você irá provisionar algumas permissões necessárias para executar o laboratório.
+Neste laboratório, você irá praticar o provisionamento de permissões essenciais para garantir o correto funcionamento dos exercícios propostos. Ao seguir o passo a passo, você compreenderá como gerenciar de maneira segura os principais recursos de acesso em um ambiente controlado.
 
 <br>
 
 ### 📌 **Objetivos**
 
-O que você aprenderá:
+Ao final deste laboratório, você será capaz de:
 
-- Criar um grupo dinamico
-- Criar as politicas
+- Criar um grupo dinâmico
+- Definir e configurar políticas de acesso
 
 <br>
 
