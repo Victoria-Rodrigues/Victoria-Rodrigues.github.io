@@ -42,7 +42,7 @@ Defina o nome do grupo dinâmico como:
 
 ![alt text](image-3.png)
 
-Mais a baixo insira as seguintes regras:
+Mais abaixo insira as seguintes regras:
 
     <copy>
     ALL {resource.type='genaiagent'}
@@ -56,7 +56,7 @@ Mais a baixo insira as seguintes regras:
 
 ![alt text](image-5.png)
 
-Após adicionar as regras no grupo dinâmico clique em **Create**. 
+Após adicionar as regras no grupo dinâmico clique em **Create**. O resultado esperado no final é conforme mostrado na figura abaixo.
 
 ![alt text](image-4.png)
 
@@ -72,6 +72,8 @@ Clique no botão **Create Policy**
 ![alt text](image-7.png)
 
 Defina o nome da politica e a descrição, e depois clique em **Show manual editor**, por exemplo:
+
+Nome:
 
     <copy>
     PolicyLab
